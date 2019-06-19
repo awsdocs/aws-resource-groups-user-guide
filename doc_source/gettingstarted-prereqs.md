@@ -1,65 +1,67 @@
 # Prerequisites for Working with AWS Resource Groups<a name="gettingstarted-prereqs"></a>
 
-Before you get started working with resource groups, be sure you have an active AWS account with existing resources, and appropriate rights to tag resources and create groups\.
+Before you get started working with resource groups, be sure you have an active AWS account with existing resources and appropriate rights to tag resources and create groups\.
 
+**Topics**
++ [Sign Up for AWS](#w4aab5c23c13b7)
++ [Create Resources](#w4aab5c23c13b9)
++ [Set Up Permissions](#rg-permissions)
 
-+ [Sign Up for AWS](#w3ab1b5c19c13b7)
-+ [Create Resources](#w3ab1b5c19c13b9)
-+ [Setting Up Permissions](#rg-permissions)
+## Sign Up for AWS<a name="w4aab5c23c13b7"></a>
 
-## Sign Up for AWS<a name="w3ab1b5c19c13b7"></a>
+If you do not have an AWS account, complete the following steps to create one\.
 
-If you do not have an AWS account, use the following procedure to create one\.
+**To sign up for an AWS account**
 
-**To sign up for AWS**
-
-1. Open [https://aws\.amazon\.com/](https://aws.amazon.com/) and choose **Create an AWS Account**\.
+1. Open [https://portal\.aws\.amazon\.com/billing/signup](https://portal.aws.amazon.com/billing/signup)\.
 
 1. Follow the online instructions\.
 
-## Create Resources<a name="w3ab1b5c19c13b9"></a>
+   Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-You can create an empty resource group, but won't be able to see insights or perform any tasks on resource group members until there are resources in the group\. For more information about the supported resource types, see \.
+## Create Resources<a name="w4aab5c23c13b9"></a>
 
-## Setting Up Permissions<a name="rg-permissions"></a>
+You can create an empty resource group, but won't be able to see insights or perform any tasks on resource group members until there are resources in the group\. For more information about the supported resource types, see [Supported Resources](supported-resources.md)\.
+
+## Set Up Permissions<a name="rg-permissions"></a>
 
 To make full use of Resource Groups and Tag Editor, you might need additional permissions to tag resources or to see a resource's tag keys and values\. These permissions fall into the following categories: 
-
 + Permissions for individual services so that you can tag resources from those services and include them in resource groups\.
++ Permissions that are are required to use the Tag Editor console
++ Permissions that are required to use the AWS Resource Groups console and API\. 
 
-+ Permissions that are are required to use the Tag Editor console and API\.
-
-+ Permissions that are required to use the new AWS Resource Groups console and API\. 
-
-**Note**  
-The managed policies that were used for legacy Resource Groups, `ResourceGroupsandTagEditorFullAccess` and `ResourceGroupsandTagEditorReadOnlyAccess`, do not grant access to AWS Resource Groups\.
-
-If you are an administrator, you can provide permissions for your users by creating policies through the AWS Identity and Access Management \(AWS IAM\) service\. You first create IAM users or groups, and then apply the policies with the permissions that they need\. For general information about creating and attaching IAM policies, see [Working with Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html)\.
+If you are an administrator, you can provide permissions for your users by creating policies through the AWS Identity and Access Management \(IAM\) service\. You first create IAM users or groups, and then apply the policies with the permissions that they need\. For information about creating and attaching IAM policies, see [Working with Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html)\.
 
 ### Permissions for Individual Services<a name="rg-perms-individual-services"></a>
 
 **Important**  
- This section describes permissions required for individual services if you want to tag resources from those services' consoles and APIs and include them in resource groups\.
+This section describes permissions that are required if you want to tag resources from other service consoles and APIs, and add those resources to resource groups\.
 
-As described in [What Are Resource Groups?](welcome.md#resource-groups-intro), each resource group represents a collection of resources of specified types that share one or more tag keys or values\. To add tags to a resource, you need the necessary permissions for the service to which the resource belongs\. For example, to tag Amazon EC2 instances, your must have permissions to the tagging actions in that service's API, such as those listed in the [Amazon EC2 user guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#Using_Tags_CLI)\.
+As described in [What Are Resource Groups?](welcome.md#resource-groups-intro), each resource group represents a collection of resources of specified types that share one or more tag keys or values\. To add tags to a resource, you need the permissions required for the service to which the resource belongs\. For example, to tag Amazon EC2 instances, your must have permissions to the tagging actions in that service's API, such as those listed in the [Amazon EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#Using_Tags_CLI)\.
 
-To make full use of the Resource Groups feature, you need other permissions that allow you to access a service's console and interact with the resources there\. For examples of such policies for Amazon EC2, see [Example Policies for Working in the Amazon EC2 Console](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-ec2-console.html) in the *Amazon EC2 User Guide for Linux Instances*\.
+To make full use of the Resource Groups feature, you need other permissions that allow you to access a service's console and interact with the resources there\. For examples of such policies for Amazon EC2, see [Example Policies for Working in the Amazon EC2 Console](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-ec2-console.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-### Granting Permissions for Using Tag Editor<a name="w3ab1b5c19c13c11c13"></a>
+### Required Permissions for Resource Groups and Tag Editor<a name="rg-permissions-te"></a>
 
-For information about how to grant permissions for Tag Editor and the legacy Resource Groups console, see [Obtaining Permissions for Resource Groups and Tag Editor](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-resource-groups.html) in the AWS Management Console Help\. Permissions shown in this topic are for using the new AWS Resource Groups service\.
+To use Resource Groups and Tag Editor, the following permissions must be added to a user's policy statement in IAM\. The next section describes how to add the required permissions\.
++ `resource-groups:*` \(This permission allows all Resource Groups actions, but to restrict actions that are available to a user, you can replace the asterisk with a [specific Resource Groups action](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsresourcegroups.html), and add more permissions as required to allow additional, specific actions\.\)
++ `cloudformation:DescribeStackResources`
++ `cloudformation:ListStackResources`
++ `tag:GetResources`
++ `tag:TagResources`
++ `tag:UntagResources`
++ `tag:getTagKeys`
++ `tag:getTagValues`
 
-### Granting Permissions for Using AWS Resource Groups<a name="w3ab1b5c19c13c11c15"></a>
+### Granting Permissions for Using AWS Resource Groups and Tag Editor<a name="rg-permissions-howto"></a>
 
-This section describes required permissions for the new AWS Resource Groups service\. For information about how to assign permissions for using legacy Resource Groups, see [Obtaining Permissions for Resource Groups and Tag Editor](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-resource-groups.html)\. The managed policies that were used for legacy Resource Groups, `ResourceGroupsandTagEditorFullAccess` and `ResourceGroupsandTagEditorReadOnlyAccess`, do not grant access to AWS Resource Groups\.
-
-To add a policy for using AWS Resource Groups to a user, do the following\.
+To add a policy for using AWS Resource Groups and Tag Editor to a user, do the following\.
 
 1. Open the [IAM console](https://console.aws.amazon.com/iam/home?#home)\.
 
 1. In the navigation pane, choose **Users**\.
 
-1. Find the user to whom you want to grant AWS Resource Groups permissions\. Choose the user's name to open the user properties page\.
+1. Find the user to whom you want to grant AWS Resource Groups and Tag Editor permissions\. Choose the user's name to open the user properties page\.
 
 1. Choose **Add permissions**\.
 
@@ -77,41 +79,14 @@ To add a policy for using AWS Resource Groups to a user, do the following\.
        {
          "Effect": "Allow",
          "Action": [
-           "ec2:DescribeInstances",
-           "ec2:DescribeSecurityGroups",
-           "ec2:DescribeSnapshots",
-           "ec2:DescribeVolumes",
-           "ec2:DescribeVpcs",
-           "elasticache:DescribeCacheClusters",
-           "elasticache:DescribeSnapshots",
-           "elasticache:ListTagsForResource",
-           "elasticloadbalancing:DescribeLoadBalancers",
-           "elasticloadbalancing:DescribeTags",
-           "elasticmapreduce:DescribeCluster",
-           "elasticmapreduce:ListClusters",
-           "kinesis:DescribeStream",
-           "kinesis:ListStreams",
-           "kinesis:ListTagsForStream",
-           "opsworks:DescribeStacks",
-           "opsworks:ListTags",
-           "rds:DescribeDBInstances",
-           "rds:DescribeDBSnapshots",
-           "rds:ListTagsForResource",
-           "redshift:DescribeClusters",
-           "redshift:DescribeTags",
            "resource-groups:*",
-           "route53:GetHealthCheck",
-           "route53:GetHostedZone",
-           "route53:ListHealthChecks",
-           "route53:ListHostedZones",
-           "route53:ListTagsForResource",
-           "route53domains:ListDomains",
-           "s3:GetBucketTaggingConfiguration",
-           "s3:ListBuckets",
-           "storagegateway:DescribeGatewayInformation",
-           "storagegateway:ListGateways",
-           "storagegateway:ListTagsForResource",
-           "tag:GetResources"
+           "cloudformation:DescribeStackResources",
+           "cloudformation:ListStackResources",
+           "tag:GetResources",
+           "tag:TagResources",
+           "tag:UntagResources",
+           "tag:getTagKeys",
+           "tag:getTagValues"
          ],
          "Resource": "*"
        }
@@ -119,13 +94,28 @@ To add a policy for using AWS Resource Groups to a user, do the following\.
    }
    ```
 **Note**  
-This policy statement grants permissions only for AWS Resource Groups actions\. It does not allow access to AWS Systems Manager tasks in the AWS Resource Groups console\. For example, this policy does not grant permissions for you to use Systems Manager Automation commands\. To perform Systems Manager tasks on resource groups, you must have Systems Manager permissions attached to your policy \(such as `ssm:*`\)\. For more information about granting access to Systems Manager, see [Configuring Access to Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html) in the *Systems Manager User Guide*\.
+This policy statement grants permissions only for AWS Resource Groups and Tag Editor actions\. It does not allow access to AWS Systems Manager tasks in the AWS Resource Groups console\. For example, this policy does not grant permissions for you to use Systems Manager Automation commands\. To perform Systems Manager tasks on resource groups, you must have Systems Manager permissions attached to your policy \(such as `ssm:*`\)\. For more information about granting access to Systems Manager, see [Configuring Access to Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html) in the *AWS Systems Manager User Guide*\.
 
 1. Choose **Review policy**\.
 
-1. Give the new policy a name and description\. To distinguish this policy from any policies for legacy Resource Groups, the name should be different from `ResourceGroupsandTagEditorFullAccess`\. For example, `AWSResourceGroupsQueryAPIAccess`\.  
+1. Give the new policy a name and description\. \(for example, `AWSResourceGroupsQueryAPIAccess`\)\.  
 ![\[IAM review policy name and description.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-iam-policyname.png)
 
 1. Choose **Create policy**\.
 
 1. Now that the policy is saved in IAM, you can attach it to other users\. For more information about how to add a policy to a user, see [Adding Permissions by Attaching Policies Directly to the User](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#by-direct-attach-policy) in the *IAM User Guide*\.
+
+### Learn More About AWS Resource Groups Authorization and Access Control<a name="rg-perms-iam"></a>
+
+Resource Groups supports the following\.
++ **Action\-based policies\.** For example, you can create a policy that allows users to perfom [https://docs.aws.amazon.com/ARG/latest/APIReference/API_ListGroups.html](https://docs.aws.amazon.com/ARG/latest/APIReference/API_ListGroups.html) operations, but no others\.
++ **Resource\-level permissions\.** Resource Groups supports using [ARNs](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) to specify individual resources in the policy\.
++ **Authorization based on tags\.** Resource Groups supports using [resource tags](tag-editor.md) in the condition of a policy\. For example, you can create a policy that allows Resource Groups users full access to a group that you have tagged\.
++ **Temporary credentials\.** Users can assume a role with a policy that allows AWS Resource Groups operations\.
+
+Resource Groups does not support resource\-based policies, and does not have service\-linked roles\.
+
+For more information about how Resource Groups and Tag Editor integrate with AWS Identity and Access Management \(IAM\), see the following topics in the *AWS Identity and Access Management User Guide*\.
++ [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html#management_svcs)
++ [Actions, Resources, and Condition Keys for AWS Resource Groups](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsresourcegroups.html)
++ [Controlling Access Using Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_controlling.html)

@@ -8,7 +8,6 @@ After you've created resource groups in Resource Groups, use AWS Systems Manager
 
 For more information about getting started with AWS Systems Manager features and tools, see the [http://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html](http://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html)\.
 
-
+**Topics**
 + [Prerequisites for Working with AWS Resource Groups](gettingstarted-prereqs.md)
-+ [Working with Tag Editor](tag-editor.md)
 + [Build Queries and Groups in AWS Resource Groups](gettingstarted-query.md)

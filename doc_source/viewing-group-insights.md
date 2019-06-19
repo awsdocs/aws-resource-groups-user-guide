@@ -2,12 +2,12 @@
 
 Insights show detailed information about the resources in your groups, such as AWS CloudTrail logs, and results of evaluations against AWS Config rules\. AWS Trusted Advisor reports and the Personal Health Dashboard show events and recommendations at the account level\. The AWS CloudTrail and AWS Config views show information about a single, selected resource group at a time\.
 
+**Topics**
++ [Included Insights](#w4aab5c34b7)
++ [Amazon CloudWatch Dashboards](#w4aab5c34b9)
++ [AWS Systems Manager Inventory and Compliance](#w4aab5c34c11)
 
-+ [Included Insights](#w3ab1b5c25b7)
-+ [Amazon CloudWatch Dashboards](#w3ab1b5c25b9)
-+ [AWS Systems Manager Inventory and Compliance](#w3ab1b5c25c11)
-
-## Included Insights<a name="w3ab1b5c25b7"></a>
+## Included Insights<a name="w4aab5c34b7"></a>
 
 Choosing **Insights** in the AWS Systems Manager left navigation pane shows monitoring views that are built\-in, or included by default\. Choose a resource group, and the page displays group members' rule compliance from AWS Config, or event log data from CloudTrail\. The Personal Health Dashboard shows events by region in your account\. Recommendations from Trusted Advisor are also per account\. The following shows an example of a Trusted Advisor view for an account\.
 
@@ -16,18 +16,15 @@ Choosing **Insights** in the AWS Systems Manager left navigation pane shows moni
 On the AWS Config tab, data includes rule compliance, compliance by resource type, and a history of configuration changes on group resources\.
 
 For more information about how to drill down, interpret, and use the data shown by these insights, see the following AWS User Guides\.
-
 + [http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html](http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html)
-
 + [http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
-
 + [http://docs.aws.amazon.com/awssupport/latest/user/getting-started.html#trusted-advisor](http://docs.aws.amazon.com/awssupport/latest/user/getting-started.html#trusted-advisor)
 
-## Amazon CloudWatch Dashboards<a name="w3ab1b5c25b9"></a>
+## Amazon CloudWatch Dashboards<a name="w4aab5c34b9"></a>
 
 The Dashboards by CloudWatch page in AWS Systems Manager shows data directly from the CloudWatch service\.
 
-**To create a new CloudWatch dashboard in the AWS Systems Manager console**
+**To create a CloudWatch dashboard in the AWS Systems Manager console**
 
 1. On the **Dashboard by CloudWatch** page, choose **Create new dashboard**\.
 
@@ -39,7 +36,7 @@ The Dashboards by CloudWatch page in AWS Systems Manager shows data directly fro
 
 For more information about how to use and change CloudWatch metrics, see the [http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html)\.
 
-## AWS Systems Manager Inventory and Compliance<a name="w3ab1b5c25c11"></a>
+## AWS Systems Manager Inventory and Compliance<a name="w4aab5c34c11"></a>
 
 The **Inventory** insights show software and packages \(excluding AWS components\) that are installed on instances in a group that you are managing with AWS Systems Manager, or that are tagged with a tag that you specify in the search box at the top of the page\. The following screenshot shows an example of operating systems that are installed in the inventory of a group's instances\.
 

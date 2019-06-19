@@ -45,6 +45,7 @@ The following procedures show you how to build a query and create a resource gro
 ![\[Grouping criteria area, EC2 instance and S3 bucket resource types selected in a tag-based query.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-instancebucket-selected.png)
 
 1. In **Tags**, specify a tag key, or a tag key and value pair, to limit the EC2 instances and S3 buckets in your account to only those that are tagged with your specified values\. Choose **Add** or press **Enter** when you've finished your tag\. In this example, filter for resources that have a tag key of **Stage**\. The tag value is optional, but narrows the results of the query further\. You can add multiple values for a tag key by adding an `OR` operator between tag values\. To add more tags, choose **Add**\. Queries assign an `AND` operator to tags, so any resource that matches the specified resource types and all specified tags is returned by the query\.  
+
 ![\[Query with tag key specified.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-query-tags.png)
 
 1. Choose **View group resources** to return the list of EC2 instances and S3 buckets in your account that match the specified tag key or keys\.
@@ -155,3 +156,5 @@ An AWS CloudFormation stack\-based group is based on a query of type `CLOUDFORMA
 1. The following are returned in the response to the command\.
    + A full description of the group you have created\.
    + The resource query that you used to create the group\.
+   + The tags that are associated with the group
+

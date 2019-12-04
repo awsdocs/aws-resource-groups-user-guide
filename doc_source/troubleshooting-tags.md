@@ -9,7 +9,7 @@ The following checklist might be helpful if errors occur when you try to apply o
 + Tag changes might not be possible if a resource is offline or terminated, or if other updates \(such as software upgrades\) to the resource are in progress\.
 + Tag changes can fail if you did not allow the changes to finish before leaving the page\. Let tag changes finish, and wait for the success or failure banner to appear on the page, before you leave the page\.
 
-## See Also<a name="w4aab5c25c19b7"></a>
+## Related Information<a name="related-info-troubleshooting"></a>
 + [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
 + [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
-+ [Working with Tag Editor](tag-editor.md)
++ [Tag Editor](tag-editor.md)

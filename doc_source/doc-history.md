@@ -2,6 +2,10 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Check for compliance with tag policies](#doc-history) | After you create and attach tag policies to accounts using AWS Organizations, you can find noncompliant tags on resources in your organization's accounts\.  | November 26, 2019 | 
+| [Support for more resource types](#doc-history) | More resource types are now supported by AWS Resource Groups and Tag Editor\. | October 4, 2019 | 
+| [New resource types supported by AWS Resource Groups](#doc-history) | More resource types are now supported by AWS Resource Groups, especially for groups based on an AWS CloudFormation stack\. | August 5, 2019 | 
+| [New resource types supported by AWS Resource Groups](#doc-history) | AWS API Gateway REST APIs, AWS CloudWatch Events events, and Amazon SNS topics are now supported resource types in AWS Resource Groups\. | June 27, 2019 | 
 | [Tag Editor now supports finding untagged resources](#doc-history) | You can now search for resources in Tag Editor that do not have tag values applied for a specific tag key\. | June 18, 2019 | 
 | [New resource types supported by AWS Resource Groups and Tag Editor](#doc-history) | Over 50 new resource types have been added to AWS Resource Groups and Tag Editor support\. | June 6, 2019 | 
 | [AWS Resource Groups and Tag Editor console moves out of AWS Systems Manager console](#doc-history) | The AWS Resource Groups and Tag Editor console is now independent from the AWS Systems Manager console\. Although you can still find pointers to the AWS Resource Groups console in the Systems Manager left navigation bar, you can open the Resource Groups and Tag Editor console directly from the drop\-down menu at the upper left of the AWS management console\. | June 5, 2019 | 
@@ -17,7 +21,7 @@
 | [AWS CloudFormation stack\-based query support added to Resource Groups](#doc-history) | You can create resource groups where the query is based on an AWS CloudFormation stack\. After you choose a stack, you can choose which resource types from the stack you want to appear in your group's query\. | November 13, 2018 | 
 | [Resource Groups and CloudTrail](#doc-history) | Resource Groups now offers AWS CloudTrail support\. You can view and work with logs of all Resource Groups API calls in CloudTrail\. | June 29, 2018 | 
 + **API version:** 2017\-11\-27
-+ **Latest documentation update:** June 18, 2019
++ **Latest documentation update:** September 24, 2019
 
 ## Earlier Updates<a name="history-older"></a>
 

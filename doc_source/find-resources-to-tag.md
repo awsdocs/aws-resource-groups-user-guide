@@ -59,7 +59,7 @@ You can export the results of a **Find resources to tag** query to a comma\-sepa
 
 1. When you are prompted by your browser, choose to open the CSV file \(typically in Microsoft Excel\), or save it to a convenient location\.
 
-## See Also<a name="w4aab5c25c15c13"></a>
+## Related Information<a name="related-info-finding-resources"></a>
 + [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
 + [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
-+ [Working with Tag Editor](tag-editor.md)
++ [Tag Editor](tag-editor.md)

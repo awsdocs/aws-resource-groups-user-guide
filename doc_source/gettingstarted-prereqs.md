@@ -3,11 +3,11 @@
 Before you get started working with resource groups, be sure you have an active AWS account with existing resources and appropriate rights to tag resources and create groups\.
 
 **Topics**
-+ [Sign Up for AWS](#w4aab5c23c13b7)
-+ [Create Resources](#w4aab5c23c13b9)
++ [Sign Up for AWS](#w4aab5c24c13b7)
++ [Create Resources](#w4aab5c24c13b9)
 + [Set Up Permissions](#rg-permissions)
 
-## Sign Up for AWS<a name="w4aab5c23c13b7"></a>
+## Sign Up for AWS<a name="w4aab5c24c13b7"></a>
 
 If you do not have an AWS account, complete the following steps to create one\.
 
@@ -19,9 +19,9 @@ If you do not have an AWS account, complete the following steps to create one\.
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Create Resources<a name="w4aab5c23c13b9"></a>
+## Create Resources<a name="w4aab5c24c13b9"></a>
 
-You can create an empty resource group, but won't be able to see insights or perform any tasks on resource group members until there are resources in the group\. For more information about the supported resource types, see [Supported Resources](supported-resources.md)\.
+You can create an empty resource group, but won't be able to perform any tasks on resource group members until there are resources in the group\. For more information about the supported resource types, see [Supported Resources](supported-resources.md)\.
 
 ## Set Up Permissions<a name="rg-permissions"></a>
 
@@ -45,13 +45,16 @@ To make full use of the Resource Groups feature, you need other permissions that
 
 To use Resource Groups and Tag Editor, the following permissions must be added to a user's policy statement in IAM\. The next section describes how to add the required permissions\.
 + `resource-groups:*` \(This permission allows all Resource Groups actions, but to restrict actions that are available to a user, you can replace the asterisk with a [specific Resource Groups action](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsresourcegroups.html), and add more permissions as required to allow additional, specific actions\.\)
-+ `cloudformation:DescribeStackResources`
++ `cloudformation:DescribeStacks`
 + `cloudformation:ListStackResources`
 + `tag:GetResources`
 + `tag:TagResources`
 + `tag:UntagResources`
 + `tag:getTagKeys`
 + `tag:getTagValues`
++ `resource-explorer:List*`
+
+To use Resource Groups and Tag Editor in the console, you also need permission to run the `resource-groups:ListGroupResources` action\. This permission is necessary for listing available resource types in the current Region\. Using policy conditions with `resource-groups:ListGroupResources` is not currently supported\.
 
 ### Granting Permissions for Using AWS Resource Groups and Tag Editor<a name="rg-permissions-howto"></a>
 
@@ -80,13 +83,14 @@ To add a policy for using AWS Resource Groups and Tag Editor to a user, do the f
          "Effect": "Allow",
          "Action": [
            "resource-groups:*",
-           "cloudformation:DescribeStackResources",
+           "cloudformation:DescribeStacks",
            "cloudformation:ListStackResources",
            "tag:GetResources",
            "tag:TagResources",
            "tag:UntagResources",
            "tag:getTagKeys",
-           "tag:getTagValues"
+           "tag:getTagValues",
+           "resource-explorer:List*"
          ],
          "Resource": "*"
        }
@@ -108,7 +112,7 @@ This policy statement grants permissions only for AWS Resource Groups and Tag Ed
 ### Learn More About AWS Resource Groups Authorization and Access Control<a name="rg-perms-iam"></a>
 
 Resource Groups supports the following\.
-+ **Action\-based policies\.** For example, you can create a policy that allows users to perfom [https://docs.aws.amazon.com/ARG/latest/APIReference/API_ListGroups.html](https://docs.aws.amazon.com/ARG/latest/APIReference/API_ListGroups.html) operations, but no others\.
++ **Action\-based policies\.** For example, you can create a policy that allows users to perform [https://docs.aws.amazon.com/ARG/latest/APIReference/API_ListGroups.html](https://docs.aws.amazon.com/ARG/latest/APIReference/API_ListGroups.html) operations, but no others\.
 + **Resource\-level permissions\.** Resource Groups supports using [ARNs](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) to specify individual resources in the policy\.
 + **Authorization based on tags\.** Resource Groups supports using [resource tags](tag-editor.md) in the condition of a policy\. For example, you can create a policy that allows Resource Groups users full access to a group that you have tagged\.
 + **Temporary credentials\.** Users can assume a role with a policy that allows AWS Resource Groups operations\.

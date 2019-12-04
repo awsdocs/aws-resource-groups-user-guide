@@ -9,7 +9,7 @@ When you add, remove, or edit existing tags, you are changing tags only on those
 + [Edit Tags of Selected Resources](#tagging-resources-edit)
 + [Remove Tags from Selected Resources](#tagging-resources-delete)
 + [Retry Failed Tag Changes](#tagging-resources-retry)
-+ [See Also](#w4aab5c25c17c17)
++ [Related Information](#related-info-manage-tags)
 
 ## Add Tags to Selected Resources<a name="tagging-resources-add"></a>
 
@@ -97,7 +97,7 @@ If tag changes fail on at least one of your selected resources, Tag Editor displ
 
 ![\[Manage tags results, retry failed tag changes on some resources.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/te_retry_failed_tag_changes_resources.png)
 
-## See Also<a name="w4aab5c25c17c17"></a>
+## Related Information<a name="related-info-manage-tags"></a>
 + [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
 + [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
-+ [Working with Tag Editor](tag-editor.md)
++ [Tag Editor](tag-editor.md)

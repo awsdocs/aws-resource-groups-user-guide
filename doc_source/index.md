@@ -15,6 +15,7 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [What Is AWS Resource Groups?](welcome.md)
+   + [Service Integrations with AWS Resource Groups](orgs_integrated-services-list.md)
    + [Supported Resources](supported-resources.md)
    + [Getting Started with AWS Resource Groups](gettingstarted.md)
       + [Prerequisites for Working with AWS Resource Groups](gettingstarted-prereqs.md)

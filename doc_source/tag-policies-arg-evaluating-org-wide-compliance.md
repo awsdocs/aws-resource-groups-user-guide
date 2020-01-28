@@ -3,9 +3,9 @@
 You can generate a report that lists all tagged resources in accounts across your organization and whether each resource is compliant with the effective tag policy\.
 
 **Important**  
-Resources that have never had tags attached to them don't show as noncompliant in compliance results\. 
+Untagged resources don't appear as noncompliant in results\. 
 
-You can generate the report from your organization's master account in the `us-east-1` Region only, and it must have access to an Amazon S3 bucket\. The bucket must have an attached bucket policy as shown in [Amazon S3 Bucket Policy for Storing Report](tag-policies-prereqs.md#bucket-policy)\. 
+You can generate the report from your organization's master account in the `us-east-1` Region only, and it must have access to an Amazon S3 bucket in the US East \(N\. Virginia\) Region\. The bucket must have an attached bucket policy as shown in [Amazon S3 Bucket Policy for Storing Report](tag-policies-prereqs.md#bucket-policy)\. 
 
 To generate an organization\-wide compliance report, you must have the following permissions:
 + `organizations:DescribeEffectivePolicy`

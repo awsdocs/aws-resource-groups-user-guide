@@ -76,7 +76,7 @@ For more information on IAM policies and permissions, see the [IAM User Guide](h
 
 ## Amazon S3 Bucket Policy for Storing Report<a name="bucket-policy"></a>
 
-To create an organization\-wide compliance report, you must grant access for the tag policies service principal to an Amazon S3 bucket for report storage\. Attach the following bucket policy to the bucket:
+To create an organization\-wide compliance report, you must grant access for the tag policies service principal to an Amazon S3 bucket in the US East \(N\. Virginia\) Region for report storage\. Attach the following bucket policy to the bucket:
 
 ```
 {

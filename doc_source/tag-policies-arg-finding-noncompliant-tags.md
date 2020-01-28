@@ -3,7 +3,7 @@
 You can evaluate the compliance of an account in your organization with its effective tag policy\.
 
 **Important**  
-Resources that have never had tags attached to them don't show as noncompliant in results\. 
+Untagged resources don't appear as noncompliant in results\.
 
 The *[effective tag policy](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-effective.html)* specifies the tagging rules that apply to an account\. It is the aggregation of any tag policies the account inherits, plus any tag policy directly attached to the account\. When you attach a tag policy to the organization root, it applies to all accounts in your organization\. When you attach a tag policy to an organizational unit \(OU\), it applies to all accounts and OUs that belong to the OU\.
 

@@ -145,7 +145,6 @@ You can use Tag Editor in the AWS Management Console to tag the following AWS re
 |  Amazon CloudFront   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  Amazon CloudWatch  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  Amazon CloudWatch Events  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
-|  Amazon CloudWatch Logs  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  AWS CodeBuild   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  AWS CodePipeline   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  Amazon Cognito   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
@@ -159,7 +158,7 @@ You can use Tag Editor in the AWS Management Console to tag the following AWS re
 |  Amazon Elasticsearch Service   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  Amazon EMR  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  Amazon FSx   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
-|  Glacier  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
+|  S3 Glacier  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  AWS Glue   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  AWS IoT Analytics   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 
 |  AWS IoT Events   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)  | 

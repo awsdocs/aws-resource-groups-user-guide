@@ -52,7 +52,6 @@ To use Resource Groups and Tag Editor, the following permissions must be added t
 + `tag:UntagResources`
 + `tag:getTagKeys`
 + `tag:getTagValues`
-+ `resource-explorer:List*`
 
 To use Resource Groups and Tag Editor in the console, you also need permission to run the `resource-groups:ListGroupResources` action\. This permission is necessary for listing available resource types in the current Region\. Using policy conditions with `resource-groups:ListGroupResources` is not currently supported\.
 
@@ -89,8 +88,7 @@ To add a policy for using AWS Resource Groups and Tag Editor to a user, do the f
            "tag:TagResources",
            "tag:UntagResources",
            "tag:getTagKeys",
-           "tag:getTagValues",
-           "resource-explorer:List*"
+           "tag:getTagValues"
          ],
          "Resource": "*"
        }

@@ -36,7 +36,7 @@ Organization\-wide compliance is evaluated every 48 hours\. This results in the 
 It can take up to 48 hours for changes to a tag policy or resources to be reflected in the organization\-wide compliance report\. For example, assume that you have a tag policy that defines a new standardized tag for a resource type\. Resources of that type that don't have this tag are shown as compliant in the report for up to 48 hours\.
 Although you can generate the report at any time, report results aren't updated until the next evaluation is complete\.
 The **NoncompliantKeys** column lists tag keys on the resource that are noncompliant with the effective tag policy\.
-The **KeysWithNonComplaintValues** column lists keys defined in the effective policy that are on the resource with either incorrect case treatment or noncompliant values\. 
+The **KeysWithNonCompliantValues** column lists keys defined in the effective policy that are on the resource with either incorrect case treatment or noncompliant values\. 
 
 **To generate an organization\-wide compliance report \(AWS CLI, AWS API\)**  
 Use the following commands and operations to generate an organization\-wide compliance report, check on its status, and view the report:

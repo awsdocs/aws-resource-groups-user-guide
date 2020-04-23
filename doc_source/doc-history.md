@@ -2,6 +2,8 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added support for AWS IoT Greengrass resources\.](#doc-history) | More resource types are now supported by AWS Resource Groups and Tag Editor\. | March 25, 2020 | 
+| [View operations data for AWS Resource Groups](#doc-history) | In the AWS Systems Manager console, the AWS Resource Groups page displays operations data for a selected group on four tabs: **Details**, **Config**, **CloudTrail**, **OpsItems**\. These tabs are not available when viewing a group in the Resource Groups console\. You can use the information on these tabs to help you understand which resources in a group are compliant and working correctly and which resources require action\. If you need to take action on a resource, you can use Systems Manager Automation runbooks to perform common operations maintenance and troubleshooting tasks\. For more information, see [Viewing Operations Data for AWS Resource Groups](https://docs.aws.amazon.com/systems-manager/latest/userguide/viewing-operations-data.html) in the *AWS Systems Manager User Guide*\. | March 16, 2020 | 
 | [Check for compliance with tag policies](#doc-history) | After you create and attach tag policies to accounts using AWS Organizations, you can find noncompliant tags on resources in your organization's accounts\.  | November 26, 2019 | 
 | [Support for more resource types](#doc-history) | More resource types are now supported by AWS Resource Groups and Tag Editor\. | October 4, 2019 | 
 | [New resource types supported by AWS Resource Groups](#doc-history) | More resource types are now supported by AWS Resource Groups, especially for groups based on an AWS CloudFormation stack\. | August 5, 2019 | 

@@ -1,6 +1,6 @@
 # Find Resources to Tag<a name="find-resources-to-tag"></a>
 
-With Tag Editor, you build a query to find resources in one or more AWS Regions that are available for tagging\. You can choose up to 20 individual resource types, or build a query on **All resource types**\. Your query can include resources that already have tags, or resources that have no tags\. For more information, see [Supported Resources for Tag Editor Tagging](supported-resources.md#supported-resources-tagging-console)\.
+With Tag Editor, you build a query to find resources in one or more AWS Regions that are available for tagging\. You can choose up to 20 individual resource types, or build a query on **All resource types**\. Your query can include resources that already have tags, or resources that have no tags\. For more information, see [Supported Resources](supported-resources.md)\.
 
 After you find resources to tag, you can use Tag Editor to add tags, or view, edit, or delete tags\.
 

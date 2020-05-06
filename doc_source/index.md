@@ -32,4 +32,4 @@ Amazon's trademarks and trade dress may not be used in
       + [Evaluating Compliance for an Account](tag-policies-arg-finding-noncompliant-tags.md)
       + [Evaluating Organization-wide Compliance](tag-policies-arg-evaluating-org-wide-compliance.md)
 + [AWS Resource Groups Document History](doc-history.md)
-+ [AWS Glossary](glossary.md)
++ [AWS glossary](glossary.md)

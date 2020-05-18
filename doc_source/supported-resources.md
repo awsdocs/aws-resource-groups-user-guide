@@ -136,6 +136,14 @@ The following tables list which resources are supported for tag\-based groups, t
 | --- | --- | --- | --- | 
 | AWS::Config::ConfigRule | Yes | Yes | No | 
 
+## AWS Data Exchange<a name="dataexchange"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| AWS::DataExchange::DataSet | Yes | Yes | No | 
+| AWS::DataExchange::Revision | No | Yes | No | 
+
 ## AWS Data Pipeline<a name="datapipeline"></a>
 
 
@@ -320,14 +328,14 @@ The following tables list which resources are supported for tag\-based groups, t
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| AWS::Greengrass::ConnectorDefinition | No | Yes | No | 
-| AWS::Greengrass::CoreDefinition | No | Yes | No | 
-| AWS::Greengrass::DeviceDefinition | No | Yes | No | 
-| AWS::Greengrass::FunctionDefinition | No | Yes | No | 
-| AWS::Greengrass::Group | No | Yes | No | 
-| AWS::Greengrass::LoggerDefinition | No | Yes | No | 
-| AWS::Greengrass::ResourceDefinition | No | Yes | No | 
-| AWS::Greengrass::SubscriptionDefinition | No | Yes | No | 
+| AWS::Greengrass::ConnectorDefinition | Yes | Yes | No | 
+| AWS::Greengrass::CoreDefinition | Yes | Yes | No | 
+| AWS::Greengrass::DeviceDefinition | Yes | Yes | No | 
+| AWS::Greengrass::FunctionDefinition | Yes | Yes | No | 
+| AWS::Greengrass::Group | Yes | Yes | No | 
+| AWS::Greengrass::LoggerDefinition | Yes | Yes | No | 
+| AWS::Greengrass::ResourceDefinition | Yes | Yes | No | 
+| AWS::Greengrass::SubscriptionDefinition | Yes | Yes | No | 
 
 ## AWS Key Management Service<a name="kms"></a>
 

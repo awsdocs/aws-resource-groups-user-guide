@@ -141,8 +141,8 @@ The following tables list which resources are supported for tag\-based groups, t
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| AWS::DataExchange::DataSet | Yes | Yes | No | 
-| AWS::DataExchange::Revision | No | Yes | No | 
+| AWS::DataExchange::DataSet | Yes | No | No | 
+| AWS::DataExchange::Revision | Yes | No | No | 
 
 ## AWS Data Pipeline<a name="datapipeline"></a>
 

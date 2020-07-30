@@ -1,4 +1,4 @@
-# Build Queries and Groups in AWS Resource Groups<a name="gettingstarted-query"></a>
+# Build queries and groups in AWS Resource Groups<a name="gettingstarted-query"></a>
 
 In AWS Resource Groups, a *query* is the foundation of a group\. You can base a resource group on one of two types of queries\.
 
@@ -9,32 +9,32 @@ For a tag\-based query, you also specify the tags that are shared by the resourc
 **AWS CloudFormation stack\-based**  
 In an AWS CloudFormation stack\-based query, you choose an AWS CloudFormation stack in your account in the current region, and then choose resource types in the stack that you want to be in the group\. You can base your query on only one AWS CloudFormation stack\. Resource Groups supports queries based on AWS CloudFormation stacks that have one of the following statuses\.  
 If you create a group based on an AWS CloudFormation stack, and the stack's status changes to one that is no longer supported as a basis for a group query, such as `DELETE_COMPLETE`, the group still exists, but it has no member resources\.  
-+ CREATE\_COMPLETE
-+ CREATE\_IN\_PROGRESS
-+ DELETE\_IN\_PROGRESS
-+ DELETE\_FAILED
-+ REVIEW\_IN\_PROGRESS
-+ ROLLBACK\_IN\_PROGRESS
-+ ROLLBACK\_FAILED
-+ UPDATE\_IN\_PROGRESS
-+ UPDATE\_COMPLETE\_CLEANUP\_IN\_PROGRESS
-+ UPDATE\_COMPLETE
-+ UPDATE\_ROLLBACK\_IN\_PROGRESS
-+ UPDATE\_ROLLBACK\_FAILED
-+ UPDATE\_ROLLBACK\_COMPLETE\_CLEANUP\_IN\_PROGRESS
-+ UPDATE\_ROLLBACK\_COMPLETE
++ `CREATE_COMPLETE`
++ `CREATE_IN_PROGRESS`
++ `DELETE_IN_PROGRESS`
++ `DELETE_FAILED`
++ `REVIEW_IN_PROGRESS`
++ `ROLLBACK_IN_PROGRESS`
++ `ROLLBACK_FAILED`
++ `UPDATE_IN_PROGRESS`
++ `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`
++ `UPDATE_COMPLETE`
++ `UPDATE_ROLLBACK_IN_PROGRESS`
++ `UPDATE_ROLLBACK_FAILED`
++ `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`
++ `UPDATE_ROLLBACK_COMPLETE`
 
 After you have created a resource group, you can perform tasks on the resources in the group\.
 
-## Build a Query and Create a Group \(Console\)<a name="gettingstarted-query-console"></a>
+## Build a query and create a group \(console\)<a name="gettingstarted-query-console"></a>
 
 The following procedures show you how to build a query and create a resource group in the AWS Management Console\.
 
 **Topics**
-+ [Create a Tag\-based Group](#gettingstarted-query-console-tag)
-+ [Create an AWS CloudFormation Stack\-based Group](#gettingstarted-query-console-stack)
++ [Create a tag\-based group](#gettingstarted-query-console-tag)
++ [Create an AWS CloudFormation stack\-based group](#gettingstarted-query-console-stack)
 
-### Create a Tag\-based Group<a name="gettingstarted-query-console-tag"></a>
+### Create a tag\-based group<a name="gettingstarted-query-console-tag"></a>
 
 1. Open Resource Groups from the top left of the AWS Management Console\. Choose **Create a resource group**\.
 
@@ -53,7 +53,7 @@ The following procedures show you how to build a query and create a resource gro
 
    1. In **Group name**, type a name for your resource group\.
 
-      A resource group name can have a maximum of 128 characters, including letters, numbers, hyphens, periods, and underscores\. The name cannot start with `AWS` or `aws`\. These are reserved\. A resource group name must be unique in the current region in your account\.
+      A resource group name can have a maximum of 128 characters, including letters, numbers, hyphens, periods, and underscores\. The name cannot start with `AWS` or `aws`\. These are reserved\. A resource group name must be unique in the current Region in your account\.
 
    1. \(Optional\) In **Group description**, enter a description of your group\.
 
@@ -63,7 +63,7 @@ The following procedures show you how to build a query and create a resource gro
 
 1. When you are finished, choose **Create group**\.
 
-### Create an AWS CloudFormation Stack\-based Group<a name="gettingstarted-query-console-stack"></a>
+### Create an AWS CloudFormation stack\-based group<a name="gettingstarted-query-console-stack"></a>
 
 1. Open Resource Groups from the top left of the AWS Management Console\.
 
@@ -75,7 +75,7 @@ The following procedures show you how to build a query and create a resource gro
 1. Choose the stack that you want to be the basis of your group\. A resource group can be based on only one stack\. To filter the list of stacks, start typing the name of the stack\. Only stacks with supported statuses appear in the list\.  
 ![\[Create a resource group page, no resource types selected, AWS CloudFormation stack-based query.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-groupcriteria-cfnstack.png)
 
-1. Choose resource types in the stack that you want to include in the group\. For this walkthrough, keep the default, **All supported resource types**\. For more information about which resource types are supported and can be in the group, see [Supported Resources](supported-resources.md)\.
+1. Choose resource types in the stack that you want to include in the group\. For this walkthrough, keep the default, **All supported resource types**\. For more information about which resource types are supported and can be in the group, see [Resources you can use with AWS Resource Groups](supported-resources.md)\.
 
 1. Choose **View group resources** to return the list of resources in the AWS CloudFormation stack that match your selected resource types\.
 
@@ -83,7 +83,7 @@ The following procedures show you how to build a query and create a resource gro
 
    1. In **Group name**, enter a name for your resource group\.
 
-      A resource group name can have a maximum of 128 characters, including letters, numbers, hyphens, periods, and underscores\. The name cannot start with `AWS` or `aws`\. These are reserved\. A resource group name must be unique in the current region in your account\.
+      A resource group name can have a maximum of 128 characters, including letters, numbers, hyphens, periods, and underscores\. The name cannot start with `AWS` or `aws`\. These are reserved\. A resource group name must be unique in the current Region in your account\.
 
    1. \(Optional\) In **Group description**, enter a description of your group\.
 
@@ -93,17 +93,17 @@ The following procedures show you how to build a query and create a resource gro
 
 1. When you are finished, choose **Create group**\.
 
-## Build a Query and Create a Group \(AWS CLI\)<a name="gettingstarted-query-cli"></a>
+## Build a query and create a group \(AWS CLI\)<a name="gettingstarted-query-cli"></a>
 
 The following procedure shows you how to build a query and create a resource group in the AWS CLI\.
 
 In the AWS CLI, you build a query and create your resource group in the same command\. The AWS CLI commands shown in this topic create groups\.
 
 **Topics**
-+ [Create a Tag\-based Group in Resource Groups](#gettingstarted-query-cli-tag)
-+ [Create an AWS CloudFormation Stack\-based Group in Resource Groups](#gettingstarted-query-cli-stack)
++ [Create a tag\-based group in Resource Groups](#gettingstarted-query-cli-tag)
++ [Create an AWS CloudFormation stack\-based group in Resource Groups](#gettingstarted-query-cli-stack)
 
-### Create a Tag\-based Group in Resource Groups<a name="gettingstarted-query-cli-tag"></a>
+### Create a tag\-based group in Resource Groups<a name="gettingstarted-query-cli-tag"></a>
 
 A tag\-based group is based on a query of type `TAG_FILTERS_1_0`\.
 
@@ -112,19 +112,25 @@ A tag\-based group is based on a query of type `TAG_FILTERS_1_0`\.
    At least one value for `ResourceTypeFilters` is required\. To specify all resource types, use `AWS::AllSupported` as the `ResourceTypeFilters` value\.
 
    ```
-   aws resource-groups create-group --name resource-group-name --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"resource_type1\",\"resource_type2\"],\"TagFilters\":[{\"Key\":\"Key1\",\"Values\":[\"Value1\",\"Value2\"]},{\"Key\":\"Key2\",\"Values\":[\"Value1\",\"Value2\"]}]}"}'
+   $ aws resource-groups create-group \
+       --name resource-group-name \
+       --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"resource_type1\",\"resource_type2\"],\"TagFilters\":[{\"Key\":\"Key1\",\"Values\":[\"Value1\",\"Value2\"]},{\"Key\":\"Key2\",\"Values\":[\"Value1\",\"Value2\"]}]}"}'
    ```
 
    The following command is an example\.
 
    ```
-   aws resource-groups create-group --name my-resource-group --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::EC2::Instance\"],\"TagFilters\":[{\"Key\":\"Stage\",\"Values\":[\"Test\"]}]}"}'
+   $ aws resource-groups create-group \
+       --name my-resource-group \
+       --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::EC2::Instance\"],\"TagFilters\":[{\"Key\":\"Stage\",\"Values\":[\"Test\"]}]}"}'
    ```
 
    The following command is an example that includes all supported resource types\.
 
    ```
-   aws resource-groups create-group --name my-resource-group --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::AllSupported\"],\"TagFilters\":[{\"Key\":\"Stage\",\"Values\":[\"Test\"]}]}"}'
+   $ aws resource-groups create-group \
+       --name my-resource-group \
+       --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::AllSupported\"],\"TagFilters\":[{\"Key\":\"Stage\",\"Values\":[\"Test\"]}]}"}'
    ```
 
 1. The following are returned in the response to the command\.
@@ -132,7 +138,7 @@ A tag\-based group is based on a query of type `TAG_FILTERS_1_0`\.
    + The resource query that you used to create the group\.
    + The tags that are associated with the group\.
 
-### Create an AWS CloudFormation Stack\-based Group in Resource Groups<a name="gettingstarted-query-cli-stack"></a>
+### Create an AWS CloudFormation stack\-based group in Resource Groups<a name="gettingstarted-query-cli-stack"></a>
 
 An AWS CloudFormation stack\-based group is based on a query of type `CLOUDFORMATION_STACK_1_0`\.
 
@@ -143,13 +149,19 @@ An AWS CloudFormation stack\-based group is based on a query of type `CLOUDFORMA
    The *stack\_identifier* is the stack ARN, as shown in the example command\.
 
    ```
-   aws resource-groups create-group --name group_name --description "description" --resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"StackIdentifier\":\"stack_identifier\",\"ResourceTypeFilters\":[\"resource_type1\",\"resource_type2\"]}"}'
+   $ aws resource-groups create-group \
+       --name group_name \
+       --description "description" \
+       --resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"StackIdentifier\":\"stack_identifier\",\"ResourceTypeFilters\":[\"resource_type1\",\"resource_type2\"]}"}'
    ```
 
    The following command is an example\.
 
    ```
-   aws resource-groups create-group --name My-CFN-stack-group --description "My first CloudFormation stack-based group" --resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"StackIdentifier\":\"arn:aws:cloudformation:us-west-2:810000000000:stack\/AWStestuseraccount\/fb0d5000-aba8-00e8-aa9e-50d5cEXAMPLE\",\"ResourceTypeFilters\":[\"AWS::EC2::Instance\",\"AWS::S3::Bucket\"]}"}'
+   $ aws resource-groups create-group \
+       --name My-CFN-stack-group \
+       --description "My first CloudFormation stack-based group" \
+       --resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"StackIdentifier\":\"arn:aws:cloudformation:us-west-2:123456789012:stack\/AWStestuseraccount\/fb0d5000-aba8-00e8-aa9e-50d5cEXAMPLE\",\"ResourceTypeFilters\":[\"AWS::EC2::Instance\",\"AWS::S3::Bucket\"]}"}'
    ```
 
 1. The following are returned in the response to the command\.

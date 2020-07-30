@@ -1,4 +1,4 @@
-# Troubleshooting Tag Changes<a name="troubleshooting-tags"></a>
+# Troubleshooting tag changes<a name="troubleshooting-tags"></a>
 
 The following checklist might be helpful if errors occur when you try to apply or change tags on selected resources in [**Find resources to tag**](find-resources-to-tag.md) query results\.
 + The resource might already have the maximum number of tags\. Generally, resources can have a maximum of 50 user\-applied tags\. Read\-only system tags do not usually count toward the 50\-tag maximum\. Other users might also be adding tags to the same resource at the same time, which could raise the resource's tags to the maximum\.
@@ -9,7 +9,7 @@ The following checklist might be helpful if errors occur when you try to apply o
 + Tag changes might not be possible if a resource is offline or terminated, or if other updates \(such as software upgrades\) to the resource are in progress\.
 + Tag changes can fail if you did not allow the changes to finish before leaving the page\. Let tag changes finish, and wait for the success or failure banner to appear on the page, before you leave the page\.
 
-## Related Information<a name="related-info-troubleshooting"></a>
-+ [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
-+ [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
+## Related information<a name="related-info-troubleshooting"></a>
++ [AWS tagging strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
++ [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
 + [Tag Editor](tag-editor.md)

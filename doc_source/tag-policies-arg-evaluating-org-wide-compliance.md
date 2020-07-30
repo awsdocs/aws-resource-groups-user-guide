@@ -1,4 +1,4 @@
-# Evaluating Organization\-wide Compliance<a name="tag-policies-arg-evaluating-org-wide-compliance"></a>
+# Evaluating organization\-wide compliance<a name="tag-policies-arg-evaluating-org-wide-compliance"></a>
 
 You can generate a report that lists all tagged resources in accounts across your organization and whether each resource is compliant with the effective tag policy\.
 
@@ -45,7 +45,7 @@ Use the following commands and operations to generate an organization\-wide comp
   + [aws resourcegroupstaggingapi describe\-report\-creation](https://docs.aws.amazon.com/cli/latest/reference/resourcegroupstaggingapi/describe-report-creation.html)
   + [aws resourcegroupstaggingapi get\-compliance\-summary](https://docs.aws.amazon.com/cli/latest/reference/resourcegroupstaggingapi/get-compliance-summary.html)
 
-  For the complete procedure for using tag policies in the AWS CLI, see [Using Tag Policies in the AWS CLI](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policy-cli.html) in the *AWS Organizations User Guide*\.
+  For the complete procedure for using tag policies in the AWS CLI, see [Using tag policies in the AWS CLI](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policy-cli.html) in the *AWS Organizations User Guide*\.
 + AWS API:
   + [StartReportCreation](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/API_StartReportCreation.html)
   + [DescribeReportCreation](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/API_DescribeReportCreation.html)

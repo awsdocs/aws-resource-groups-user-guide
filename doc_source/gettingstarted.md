@@ -1,4 +1,4 @@
-# Getting Started with AWS Resource Groups<a name="gettingstarted"></a>
+# Getting started with AWS Resource Groups<a name="gettingstarted"></a>
 
 In AWS, a *resource* is an entity that you can work with\. Examples include an Amazon EC2 instance, an Amazon S3 bucket, or an Amazon Route 53 hosted zone\. If you work with multiple resources, you might find it useful to manage them as a group rather than move from one AWS service to another for each task\.
 
@@ -9,4 +9,4 @@ After you've created resource groups in Resource Groups, use AWS Systems Manager
 For more information about getting started with AWS Systems Manager features and tools, see the [http://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html](http://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html)\.
 
 **Topics**
-+ [Prerequisites for Working with AWS Resource Groups](gettingstarted-prereqs.md)
++ [Prerequisites for working with AWS Resource Groups](gettingstarted-prereqs.md)

@@ -1,4 +1,4 @@
-# Evaluating Compliance for an Account<a name="tag-policies-arg-finding-noncompliant-tags"></a>
+# Evaluating compliance for an account<a name="tag-policies-arg-finding-noncompliant-tags"></a>
 
 You can evaluate the compliance of an account in your organization with its effective tag policy\.
 
@@ -8,7 +8,7 @@ Untagged resources don't appear as noncompliant in results\.
 The *[effective tag policy](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-effective.html)* specifies the tagging rules that apply to an account\. It is the aggregation of any tag policies the account inherits, plus any tag policy directly attached to the account\. When you attach a tag policy to the organization root, it applies to all accounts in your organization\. When you attach a tag policy to an organizational unit \(OU\), it applies to all accounts and OUs that belong to the OU\.
 
 **Note**  
-If you haven't yet created tag policies, see [Getting Started with Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policies-getting-started.html) in the *AWS Organizations User Guide*\.
+If you haven't yet created tag policies, see [Getting started with tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policies-getting-started.html) in the *AWS Organizations User Guide*\.
 
 To find noncompliant tags, you must have the following permissions:
 + `organizations:DescribeEffectivePolicy`
@@ -45,7 +45,7 @@ Use the following commands and operations to find noncompliant tags:
   + [aws resourcegroupstaggingapi tag\-resources](https://docs.aws.amazon.com/cli/latest/reference/resourcegroupstaggingapi/tag-resources.html)
   + [aws resourcegroupstaggingapi untag\-resources](https://docs.aws.amazon.com/cli/latest/reference/resourcegroupstaggingapi/untag-resources.html)
 
-  For the complete procedure for using tag policies in the AWS CLI, see [Using Tag Policies in the AWS CLI](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policy-cli.html) in the *AWS Organizations User Guide*\.
+  For the complete procedure for using tag policies in the AWS CLI, see [Using tag policies in the AWS CLI](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policy-cli.html) in the *AWS Organizations User Guide*\.
 + AWS API:
   + [GetResources](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/API_GetResources.html)
   + [TagResources](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/API_TagResources.html)
@@ -60,4 +60,4 @@ Finding and correcting noncompliant tags is an iterative process for multiple re
 + Compliance can change anytime a new resource is created or when new tags are assigned to a resource\. 
 + An account's effective tag policy is updated whenever a tag policy is attached to or detached from it\. The effective tag policy is also updated whenever changes occur to tag the policies the account inherits\.
 
-If you are signed in as the master account in the organization, you can also generate a report\. This report shows information on all tagged resources in your organization's accounts\. For information, see [Evaluating Organization\-wide Compliance](tag-policies-arg-evaluating-org-wide-compliance.md)\.
+If you are signed in as the master account in the organization, you can also generate a report\. This report shows information on all tagged resources in your organization's accounts\. For information, see [Evaluating organization\-wide compliance](tag-policies-arg-evaluating-org-wide-compliance.md)\.

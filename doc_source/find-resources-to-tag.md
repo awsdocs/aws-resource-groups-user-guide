@@ -1,6 +1,6 @@
-# Find Resources to Tag<a name="find-resources-to-tag"></a>
+# Find resources to tag<a name="find-resources-to-tag"></a>
 
-With Tag Editor, you build a query to find resources in one or more AWS Regions that are available for tagging\. You can choose up to 20 individual resource types, or build a query on **All resource types**\. Your query can include resources that already have tags, or resources that have no tags\. For more information, see [Supported Resources](supported-resources.md)\.
+With Tag Editor, you build a query to find resources in one or more AWS Regions that are available for tagging\. You can choose up to 20 individual resource types, or build a query on **All resource types**\. Your query can include resources that already have tags, or resources that have no tags\. For more information, see [Resources you can use with AWS Resource Groups](supported-resources.md)\.
 
 After you find resources to tag, you can use Tag Editor to add tags, or view, edit, or delete tags\.
 
@@ -59,7 +59,7 @@ You can export the results of a **Find resources to tag** query to a comma\-sepa
 
 1. When you are prompted by your browser, choose to open the CSV file \(typically in Microsoft Excel\), or save it to a convenient location\.
 
-## Related Information<a name="related-info-finding-resources"></a>
+## Related information<a name="related-info-finding-resources"></a>
 + [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
-+ [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
++ [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
 + [Tag Editor](tag-editor.md)

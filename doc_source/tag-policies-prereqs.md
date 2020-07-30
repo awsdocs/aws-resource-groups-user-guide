@@ -1,18 +1,18 @@
-# Prerequisites and Permissions<a name="tag-policies-prereqs"></a>
+# Prerequisites and permissions<a name="tag-policies-prereqs"></a>
 
 Before you can evaluate compliance with tag policies in AWS Resource Groups, you need to meet the requirements and set the necessary permissions\. 
 
-## Prerequisites for Evaluating Compliance with Tag Policies<a name="tag-policies-prereqs-overview"></a>
+## Prerequisites for evaluating compliance with tag policies<a name="tag-policies-prereqs-overview"></a>
 
 Evaluating compliance with tag policies requires the following:
 + You must first enable the feature in AWS Organizations and create and attach tag policies\. For more information, see the following pages in the *AWS Organizations User Guide*:
-  + [Prerequisites and Permissions for Managing Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html)
-  + [Enabling Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/enable-tag-policies.html)
-  + [Getting Started with Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policies-getting-started.html)
-+ To [**find noncompliant tags on an account's resources**](tag-policies-arg-finding-noncompliant-tags.md), you need sign\-in credentials for that account and the permissions listed in [Permissions for Evaluating Compliance for an Account](#tag-policies-permissions-account)\.
-+ To [**evaluate organization\-wide compliance**](tag-policies-arg-evaluating-org-wide-compliance.md), you need sign\-in credentials for the organization's master account and the permissions listed in [Permissions for Evaluating Organization\-wide Compliance ](#tag-policies-permissions-org)\.
+  + [Prerequisites and permissions for managing tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html)
+  + [Enabling tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/enable-tag-policies.html)
+  + [Getting started with tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policies-getting-started.html)
++ To [**find noncompliant tags on an account's resources**](tag-policies-arg-finding-noncompliant-tags.md), you need sign\-in credentials for that account and the permissions listed in [Permissions for evaluating compliance for an account](#tag-policies-permissions-account)\.
++ To [**evaluate organization\-wide compliance**](tag-policies-arg-evaluating-org-wide-compliance.md), you need sign\-in credentials for the organization's master account and the permissions listed in [Permissions for evaluating organization\-wide compliance ](#tag-policies-permissions-org)\.
 
-## Permissions for Evaluating Compliance for an Account<a name="tag-policies-permissions-account"></a>
+## Permissions for evaluating compliance for an account<a name="tag-policies-permissions-account"></a>
 
 Finding noncompliant tags on an account's resources requires these permissions:
 + `organizations:DescribeEffectivePolicy` – To get the contents of the effective tag policy for the account\.
@@ -43,7 +43,7 @@ The following example IAM policy provides permissions for evaluating tag complia
 
 For more information on IAM policies and permissions, see the [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
 
-## Permissions for Evaluating Organization\-wide Compliance<a name="tag-policies-permissions-org"></a>
+## Permissions for evaluating organization\-wide compliance<a name="tag-policies-permissions-org"></a>
 
 Evaluating organization\-wide compliance with tag policies requires the following permissions:
 + `organizations:DescribeEffectivePolicy` – To get the contents of the tag policy that's attached to the organization, OU, or account\.
@@ -74,7 +74,7 @@ The following example IAM policy provides permissions for evaluating organizatio
 
 For more information on IAM policies and permissions, see the [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
 
-## Amazon S3 Bucket Policy for Storing Report<a name="bucket-policy"></a>
+## Amazon S3 bucket policy for storing report<a name="bucket-policy"></a>
 
 To create an organization\-wide compliance report, you must grant access for the tag policies service principal to an Amazon S3 bucket in the US East \(N\. Virginia\) Region for report storage\. Attach the following bucket policy to the bucket:
 

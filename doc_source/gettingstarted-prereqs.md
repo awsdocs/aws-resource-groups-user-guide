@@ -3,11 +3,11 @@
 Before you get started working with resource groups, be sure you have an active AWS account with existing resources and appropriate rights to tag resources and create groups\.
 
 **Topics**
-+ [Sign up for AWS](#w10aab5c23c13b7)
-+ [Create resources](#w10aab5c23c13b9)
++ [Sign up for AWS](#w31aab5c23c13b7)
++ [Create resources](#w31aab5c23c13b9)
 + [Set up permissions](#rg-permissions)
 
-## Sign up for AWS<a name="w10aab5c23c13b7"></a>
+## Sign up for AWS<a name="w31aab5c23c13b7"></a>
 
 If you do not have an AWS account, complete the following steps to create one\.
 
@@ -19,7 +19,7 @@ If you do not have an AWS account, complete the following steps to create one\.
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Create resources<a name="w10aab5c23c13b9"></a>
+## Create resources<a name="w31aab5c23c13b9"></a>
 
 You can create an empty resource group, but won't be able to perform any tasks on resource group members until there are resources in the group\. For more information about the supported resource types, see [Resources you can use with AWS Resource Groups](supported-resources.md)\.
 

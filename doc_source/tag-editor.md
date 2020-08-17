@@ -15,7 +15,7 @@ You can add tags to resources when you create the resource\. You can use the res
 
 Not all resources can have tags applied\. For information about which resources Tag Editor supports, see [Resources you can use with AWS Resource Groups](supported-resources.md)\. If a resource type that you want to tag is not supported, be sure to let AWS know by choosing the **Feedback** tool in the lower left corner of the console window\.
 
-For information about permissions and roles that are required to tag resources, see [Set up permissions](gettingstarted-prereqs.md#rg-permissions)\.
+For information about permissions and roles that are required to tag resources, see [Set up permissions](gettingstarted-prereqs.md#gettingstarted-prereqs-permissions)\.
 
 **Topics**
 + [Find resources to tag](find-resources-to-tag.md)

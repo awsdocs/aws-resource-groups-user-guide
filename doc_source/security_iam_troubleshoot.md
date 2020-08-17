@@ -52,7 +52,7 @@ To allow others to access Resource Groups, you must create an IAM entity \(user 
 
 To get started right away, see [Creating Your First IAM Delegated User and Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-delegated-user.html) in the *IAM User Guide*\.
 
-For more information about granting access to Resource Groups and Tag Editor, see [Granting permissions for using AWS Resource Groups and tag editor](gettingstarted-prereqs.md#rg-permissions-howto) in this guide\.
+For more information about granting access to Resource Groups and Tag Editor, see [Granting permissions for using AWS Resource Groups and tag editor](gettingstarted-prereqs.md#gettingstarted-prereqs-permissions-howto) in this guide\.
 
 ## I Want to Allow People Outside of My AWS Account to Access My Resource Groups Groups<a name="security_troubleshoot-cross-account"></a>
 

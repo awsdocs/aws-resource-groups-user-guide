@@ -2,12 +2,7 @@
 
 Before you get started working with resource groups, be sure you have an active AWS account with existing resources and appropriate rights to tag resources and create groups\.
 
-**Topics**
-+ [Sign up for AWS](#w31aab5c23c13b7)
-+ [Create resources](#w31aab5c23c13b9)
-+ [Set up permissions](#rg-permissions)
-
-## Sign up for AWS<a name="w31aab5c23c13b7"></a>
+## Sign up for AWS<a name="gettingstarted-prereqs-signup"></a>
 
 If you do not have an AWS account, complete the following steps to create one\.
 
@@ -19,11 +14,11 @@ If you do not have an AWS account, complete the following steps to create one\.
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Create resources<a name="w31aab5c23c13b9"></a>
+## Create resources<a name="gettingstarted-prereqs-create"></a>
 
 You can create an empty resource group, but won't be able to perform any tasks on resource group members until there are resources in the group\. For more information about the supported resource types, see [Resources you can use with AWS Resource Groups](supported-resources.md)\.
 
-## Set up permissions<a name="rg-permissions"></a>
+## Set up permissions<a name="gettingstarted-prereqs-permissions"></a>
 
 To make full use of Resource Groups and Tag Editor, you might need additional permissions to tag resources or to see a resource's tag keys and values\. These permissions fall into the following categories: 
 + Permissions for individual services so that you can tag resources from those services and include them in resource groups\.
@@ -41,7 +36,7 @@ As described in [What are resource groups?](welcome.md#resource-groups-intro), e
 
 To make full use of the Resource Groups feature, you need other permissions that allow you to access a service's console and interact with the resources there\. For examples of such policies for Amazon EC2, see [Example policies for working in the amazon EC2 console](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-ec2-console.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-### Required permissions for Resource Groups and tag editor<a name="rg-permissions-te"></a>
+### Required permissions for Resource Groups and tag editor<a name="gettingstarted-prereqs-permissions-te"></a>
 
 To use Resource Groups and Tag Editor, the following permissions must be added to a user's policy statement in IAM\. The next section describes how to add the required permissions\.
 + `resource-groups:*` \(This permission allows all Resource Groups actions, but to restrict actions that are available to a user, you can replace the asterisk with a [specific Resource Groups action](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsresourcegroups.html), and add more permissions as required to allow additional, specific actions\.\)
@@ -56,7 +51,7 @@ To use Resource Groups and Tag Editor, the following permissions must be added t
 
 To use Resource Groups and Tag Editor in the console, you also need permission to run the `resource-groups:ListGroupResources` action\. This permission is necessary for listing available resource types in the current Region\. Using policy conditions with `resource-groups:ListGroupResources` is not currently supported\.
 
-### Granting permissions for using AWS Resource Groups and tag editor<a name="rg-permissions-howto"></a>
+### Granting permissions for using AWS Resource Groups and tag editor<a name="gettingstarted-prereqs-permissions-howto"></a>
 
 To add a policy for using AWS Resource Groups and Tag Editor to a user, do the following\.
 

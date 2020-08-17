@@ -26,9 +26,9 @@ The following tables list which resources are supported for tag\-based groups, t
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| AWS::AppStream::Fleet | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
-| AWS::AppStream::ImageBuilder | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
-| AWS::AppStream::Stack | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
+| AWS::AppStream::Fleet | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
+| AWS::AppStream::ImageBuilder | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
+| AWS::AppStream::Stack | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
 
 ## AWS AppSync<a name="services-appsync"></a>
 
@@ -45,12 +45,19 @@ The following tables list which resources are supported for tag\-based groups, t
 | --- | --- | --- | --- | 
 | AWS::CertificateManager::Certificate | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | 
 
-## AWS Certificate Manager private certificate authority<a name="services-acmpca"></a>
+## AWS Certificate Manager Private Certificate Authority<a name="services-acmpca"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
 | AWS::ACMPCA::CertificateAuthority | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
+
+## AWS Cloud9<a name="services-cloud9"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| AWS::Cloud9::Environment | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
 
 ## AWS CloudFormation<a name="services-cloudformation"></a>
 
@@ -147,7 +154,7 @@ The following tables list which resources are supported for tag\-based groups, t
 | --- | --- | --- | --- | 
 | AWS::Config::ConfigRule | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
 
-## AWS data Exchange<a name="services-dataexchange"></a>
+## AWS Data Exchange<a name="services-dataexchange"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
@@ -476,7 +483,7 @@ The following tables list which resources are supported for tag\-based groups, t
 | --- | --- | --- | --- | 
 | AWS::ResourceGroups::Group | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-yes.png) Yes | ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/icon-no.png) No | 
 
-## AWS robomaker<a name="services-robomaker"></a>
+## AWS Robomaker<a name="services-robomaker"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
@@ -501,7 +508,7 @@ The following tables list which resources are supported for tag\-based groups, t
 
 ² This is a resource for a global service that is hosted in the **US East \(N\. Virginia\)** Region\. Because Resource Groups are maintained separately for each region, you must switch your AWS console to the Region that contains the resources you want to include in the group\. To create a resource group that contains a global resource, you must configure your AWS Console to **US East \(N\. Virginia\) us\-east\-1** using the Region selector in the upper\-right corner of the AWS console\.
 
-## Amazon Route 53 resolver<a name="services-route53resolver"></a>
+## Amazon Route 53 Resolver<a name="services-route53resolver"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 

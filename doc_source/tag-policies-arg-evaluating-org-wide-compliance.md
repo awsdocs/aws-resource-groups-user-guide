@@ -5,7 +5,7 @@ You can generate a report that lists all tagged resources in accounts across you
 **Important**  
 Untagged resources don't appear as noncompliant in results\. 
 
-You can generate the report from your organization's master account in the `us-east-1` Region only, and it must have access to an Amazon S3 bucket in the US East \(N\. Virginia\) Region\. The bucket must have an attached bucket policy as shown in [Amazon S3 Bucket Policy for Storing Report](tag-policies-prereqs.md#bucket-policy)\. 
+You can generate the report from your organization's master account account in the `us-east-1` Region only, and it must have access to an Amazon S3 bucket in the US East \(N\. Virginia\) Region\. The bucket must have an attached bucket policy as shown in [Amazon S3 Bucket Policy for Storing Report](tag-policies-prereqs.md#bucket-policy)\. 
 
 To generate an organization\-wide compliance report, you must have the following permissions:
 + `organizations:DescribeEffectivePolicy`

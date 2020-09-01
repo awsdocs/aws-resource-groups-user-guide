@@ -24,7 +24,7 @@ Update a tag\-based group by changing the resource types or tags in the query on
 
 1. In the navigation pane, under **Saved resource groups**, choose a group, and then choose **Edit**\.
 **Note**  
-You can update only resource groups that you own\. The **Owner** column shows account ownership for each resource group\. Any groups with an account owner other than the one you're signed in to were created in AWS License Manager\. For more information, see [Host resource groups in AWS License Manager](https://docs.aws.amazon.com/license-manager/latest/userguide/host-resource-groups.html) in the *AWS License Manager User Guide\.* 
+You can update only resource groups that you own\. The **Owner** column shows account ownership for each resource group\. Any groups with an account owner other than the one you're signed in to were created in AWS License Manager\. For more information, see [Host resource groups in AWS License Manager](https://docs.aws.amazon.com/license-manager/latest/userguide/host-resource-groups.html) in the *License Manager User Guide*\. 
 
 1. On the **Edit group** page, in **Grouping criteria**, add or remove resource types\. You can have a maximum of 20 resource types in a query\. To remove a resource type, choose **X** on the resource type's label\. Choose **View group resources** to see how the changes affect your group's resource members\. In this walkthrough, we add the resource type **AWS::RDS::DBInstance** to the query\.  
 ![\[Group query\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-update-group-query.png)
@@ -51,7 +51,7 @@ You cannot change an AWS CloudFormation stack\-based group to a tag\-based group
 
 1. In the navigation pane, under **Saved resource groups**, choose an existing group, and then choose **Edit**\.
 **Note**  
-You can update only resource groups that you own\. The **Owner** column shows account ownership for each resource group\. Any groups with an account owner other than the one you're signed in to were created in AWS License Manager\. For more information, see [Host resource groups in AWS License Manager](https://docs.aws.amazon.com/license-manager/latest/userguide/host-resource-groups.html) in the *AWS License Manager User Guide\.* 
+You can update only resource groups that you own\. The **Owner** column shows account ownership for each resource group\. Any groups with an account owner other than the one you're signed in to were created in AWS License Manager\. For more information, see [Host resource groups in AWS License Manager](https://docs.aws.amazon.com/license-manager/latest/userguide/host-resource-groups.html) in the *License Manager User Guide*\. 
 
 1. On the **Edit group** page, in **Grouping criteria**, to change the stack on which your group is based, choose the stack from the drop\-down list\. A resource group can be based on only one stack\. To filter the list of stacks, start typing the name of the stack\. Only stacks with supported statuses appear in the list\. For a list of supported statuses, see [Build queries and groups in AWS Resource Groups](gettingstarted-query.md) in this guide\.  
 ![\[Grouping criteria area, no resource types selected, AWS CloudFormation stack-based query.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-groupcriteria-cfnstack.png)
@@ -82,13 +82,17 @@ In the AWS CLI, you update a group's query and update a resource group's descrip
 1. If you do not want to change the description of your group, skip this step and go on to the next\. In an AWS CLI session, type the following, and then press **Enter**, replacing the values for group name and description with your own\.
 
    ```
-   aws resource-groups update-group --group-name resource-group-name --description "description_text"
+   $ aws resource-groups update-group \
+       --group-name resource-group-name \
+       --description "description_text"
    ```
 
    The following command is an example\.
 
    ```
-   aws resource-groups update-group --group-name my-resource-group --description "EC2 instances, S3 buckets, and RDS DBs that we are using for the test stage."
+   $ aws resource-groups update-group \
+       --group-name my-resource-group \
+       --description "EC2 instances, S3 buckets, and RDS DBs that we are using for the test stage."
    ```
 
    The command returns a full, updated description of the group\.
@@ -96,13 +100,17 @@ In the AWS CLI, you update a group's query and update a resource group's descrip
 1. To update the query and tags of a group, type the following command\. Replace the values for group name, resource types, tag keys, and tag values with your own\. Then pres **Enter**\. You can have a maximum of 20 resource types in a query\.
 
    ```
-   aws resource-groups update-group-query --group-name resource-group-name --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"resource_type1\",\"resource_type2\"],\"TagFilters\":[{\"Key\":\"Key1\",\"Values\":[\"Value1\",\"Value2\"]},{\"Key\":\"Key2\",\"Values\":[\"Value1\",\"Value2\"]}]}"}'
+   $ aws resource-groups update-group-query \
+       --group-name resource-group-name \
+       --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"resource_type1\",\"resource_type2\"],\"TagFilters\":[{\"Key\":\"Key1\",\"Values\":[\"Value1\",\"Value2\"]},{\"Key\":\"Key2\",\"Values\":[\"Value1\",\"Value2\"]}]}"}'
    ```
 
    The following command is an example\.
 
    ```
-   aws resource-groups update-group-query --group-name my-resource-group --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::EC2::Instance\",\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\"],\"TagFilters\":[{\"Key\":\"Stage\",\"Values\":[\"Test\"]}]}"}'
+   $ aws resource-groups update-group-query \
+       --group-name my-resource-group \
+       --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::EC2::Instance\",\"AWS::S3::Bucket\",\"AWS::RDS::DBInstance\"],\"TagFilters\":[{\"Key\":\"Stage\",\"Values\":[\"Test\"]}]}"}'
    ```
 
    The command returns the updated query as a result\.
@@ -112,13 +120,17 @@ In the AWS CLI, you update a group's query and update a resource group's descrip
 1. If you do not want to change the description of your group, skip this step and go on to the next\. In an AWS CLI session, type the following, and then press **Enter**, replacing the values for group name and description with your own\.
 
    ```
-   aws resource-groups update-group --group-name "resource-group-name" --description "description_text"
+   $ aws resource-groups update-group \
+       --group-name "resource-group-name" \
+       --description "description_text"
    ```
 
    The following command is an example\.
 
    ```
-   aws resource-groups update-group --group-name "My-CFN-stack-group" --description "EC2 instances, S3 buckets, and RDS DBs that we are using for the test stage."
+   $ aws resource-groups update-group \
+       --group-name "My-CFN-stack-group" \
+       --description "EC2 instances, S3 buckets, and RDS DBs that we are using for the test stage."
    ```
 
    The command returns a full, updated description of the group\.
@@ -128,13 +140,19 @@ In the AWS CLI, you update a group's query and update a resource group's descrip
    The *stack\_identifier* is the stack ARN, as shown in the example command\.
 
    ```
-   aws resource-groups update-group-query --group-name resource-group-name --description "description" --resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"StackIdentifier\":\"stack_identifier\",\"ResourceTypeFilters\":[\"resource_type1\",\"resource_type2\"]}"}'
+   $ aws resource-groups update-group-query \
+       --group-name resource-group-name \
+       --description "description" \
+       --resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"StackIdentifier\":\"stack_identifier\",\"ResourceTypeFilters\":[\"resource_type1\",\"resource_type2\"]}"}'
    ```
 
    The following command is an example\.
 
    ```
-   aws resource-groups update-group-query --group-name "my-resource-group" --description "Updated CloudFormation stack-based group" --resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"StackIdentifier\":\"arn:aws:cloudformation:us-west-2:810000000000:stack\/AWStestuseraccount\/fb0d5000-aba8-00e8-aa9e-50d5cEXAMPLE\",\"ResourceTypeFilters\":[\"AWS::EC2::Instance\",\"AWS::S3::Bucket\"]}"}'
+   $ aws resource-groups update-group-query \
+       --group-name "my-resource-group" \
+       --description "Updated CloudFormation stack-based group" \
+       --resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"StackIdentifier\":\"arn:aws:cloudformation:us-west-2:810000000000:stack\/AWStestuseraccount\/fb0d5000-aba8-00e8-aa9e-50d5cEXAMPLE\",\"ResourceTypeFilters\":[\"AWS::EC2::Instance\",\"AWS::S3::Bucket\"]}"}'
    ```
 
    The command returns the updated query as a result\.

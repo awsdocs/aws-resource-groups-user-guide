@@ -10,6 +10,6 @@ The following checklist might be helpful if errors occur when you try to apply o
 + Tag changes can fail if you did not allow the changes to finish before leaving the page\. Let tag changes finish, and wait for the success or failure banner to appear on the page, before you leave the page\.
 
 ## Related information<a name="related-info-troubleshooting"></a>
-+ [AWS tagging strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
++ [AWS tagging strategies](http://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
 + [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
 + [Tag Editor](tag-editor.md)

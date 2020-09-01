@@ -1,6 +1,6 @@
 # Tag Editor<a name="tag-editor"></a>
 
-Tags are words or phrases that act as metadata for identifying and organizing your AWS resources\. A resource can have up to 50 user\-applied tags\. It can also have read\-only system tags\. Each tag consists of a key and one optional value\. For more information, see [AWS tagging strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/) in AWS Answers, and [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the *AWS Billing and Cost Management User Guide*\.
+Tags are words or phrases that act as metadata that you can use to identify and organize your AWS resources\. A resource can have up to 50 user\-applied tags\. It can also have read\-only system tags\. Each tag consists of a key and one optional value\. For more information, see [AWS tagging strategies](http://aws.amazon.com/answers/account-management/aws-tagging-strategies/) in *AWS Answers*, and [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the *AWS Billing and Cost Management User Guide*\.
 
 **Important**  
 Do not store personally identifiable information \(PII\) or other confidential or sensitive information in tags\. We use tags to provide you with billing and administration services\. Tags are not intended to be used for private or sensitive data\.

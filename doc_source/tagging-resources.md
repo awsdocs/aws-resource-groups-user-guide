@@ -7,7 +7,7 @@ Do not store personally identifiable information \(PII\) or other confidential o
 
 **Other ways to manage your tags**  
 This topic discusses tagging resources by using the Tag Editor in the AWS console\. However, there are other tools you can use to manage the tags on your AWS resources:  
-You can type or script commands at your shell prompt by using the [`resourcegroupstaggingapi` commands](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/resourcegroupstaggingapi/index.html#cli-aws-resourcegroupstaggingapi) in the AWS Command Line Interface \(AWS CLI\)\.
+You can type or script commands at your shell prompt by using the [`resourcegroupstaggingapi` commands](https://docs.aws.amazon.com/cli/latest/reference/resourcegroupstaggingapi/index.html#cli-aws-resourcegroupstaggingapi) in the AWS Command Line Interface \(AWS CLI\)\.
 You can create and run PowerShell scripts by using the [AWS Resource Groups tagging API](https://docs.aws.amazon.com/powershell/latest/reference/items/ResourceGroupsTaggingAPI_cmdlets.html) in the AWS Tools for PowerShell\.
 You can create and run programs with any of the available [AWS SDKs](https://docs.aws.amazon.com/index.html#sdks) by using the [Resource groups tagging APIs](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/), such as the [tagging APIs for Python](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/resourcegroupstaggingapi.html) or the [tagging APIs for Java](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ResourceGroupsTaggingAPI.html)\.
 
@@ -110,6 +110,6 @@ If tag changes fail on at least one of your selected resources, Tag Editor displ
 ![\[Manage tags results, retry failed tag changes on some resources.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/te_retry_failed_tag_changes_resources.png)
 
 ## Related information<a name="related-info-manage-tags"></a>
-+ [AWS tagging strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
++ [AWS tagging strategies](http://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
 + [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
 + [Tag Editor](tag-editor.md)

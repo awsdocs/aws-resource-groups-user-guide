@@ -7,8 +7,8 @@ Before you can evaluate compliance with tag policies in AWS Resource Groups, you
 Evaluating compliance with tag policies requires the following:
 + You must first enable the feature in AWS Organizations and create and attach tag policies\. For more information, see the following pages in the *AWS Organizations User Guide*:
   + [Prerequisites and permissions for managing tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html)
-  + [Enabling tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/enable-tag-policies.html)
-  + [Getting started with tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/tag-policies-getting-started.html)
+  + [Enabling tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_enable-disable.html)
+  + [Getting started with tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-getting-started.html)
 + To [**find noncompliant tags on an account's resources**](tag-policies-arg-finding-noncompliant-tags.md), you need sign\-in credentials for that account and the permissions listed in [Permissions for evaluating compliance for an account](#tag-policies-permissions-account)\.
 + To [**evaluate organization\-wide compliance**](tag-policies-arg-evaluating-org-wide-compliance.md), you need sign\-in credentials for the organization's master account and the permissions listed in [Permissions for evaluating organization\-wide compliance ](#tag-policies-permissions-org)\.
 

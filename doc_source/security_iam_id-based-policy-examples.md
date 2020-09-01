@@ -47,7 +47,7 @@ To ensure that those entities can still use Resource Groups, attach the followin
 }
 ```
 
-For more information about granting access to Resource Groups and Tag Editor, see [Granting permissions for using AWS Resource Groups and tag editor](gettingstarted-prereqs.md#gettingstarted-prereqs-permissions-howto) in this guide\.
+For more information about granting access to Resource Groups and Tag Editor, see [Granting permissions for using AWS Resource Groups and Tag Editor](gettingstarted-prereqs.md#gettingstarted-prereqs-permissions-howto) in this guide\.
 
 ## Allow Users to View Their Own Permissions<a name="security_iam_policy-examples-own-permissions"></a>
 

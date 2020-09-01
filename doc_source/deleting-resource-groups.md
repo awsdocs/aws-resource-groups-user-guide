@@ -18,7 +18,8 @@ You can use the Resource Groups console or the AWS CLI to delete resource groups
 1. Type the following command, replacing *resource\_group\_name* with the name of your group, and then press **Enter**\.
 
    ```
-   aws resource-groups delete-group --group-name resource_group_name
+   $ aws resource-groups delete-group \
+       --group-name resource_group_name
    ```
 
 1. When you are prompted to confirm the deletion, type `yes`, and then press **Enter**\.

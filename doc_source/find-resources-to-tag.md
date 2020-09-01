@@ -6,7 +6,7 @@ After you find resources to tag, you can use Tag Editor to add tags, or view, ed
 
 **To find resources to tag**
 
-1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/console/home), choose **Resource Groups**, and then choose **Tag Editor**\.
+1. Sign in to the [AWS Management Console](), choose **Resource Groups**, and then choose **Tag Editor**\.
 
 1. \(Optional\.\) Choose regions in which to search for resources to tag\. By default, your current region is selected\. For this walkthrough, choose **us\-east\-1** and **us\-west\-2**\.  
 ![\[Find resources to tag page with us-east-1 and us-west-2 selected as regions.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/te_findresources_regions.png)
@@ -60,6 +60,6 @@ You can export the results of a **Find resources to tag** query to a comma\-sepa
 1. When you are prompted by your browser, choose to open the CSV file \(typically in Microsoft Excel\), or save it to a convenient location\.
 
 ## Related information<a name="related-info-finding-resources"></a>
-+ [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
++ [AWS Tagging Strategies](http://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
 + [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
 + [Tag Editor](tag-editor.md)

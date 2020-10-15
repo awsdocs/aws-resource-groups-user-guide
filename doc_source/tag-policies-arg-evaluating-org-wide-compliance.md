@@ -15,7 +15,9 @@ To generate an organization\-wide compliance report, you must have the following
 
 **To generate an organization\-wide compliance report \(console\)**
 
-1. In the AWS Resource Groups navigation pane, choose **Tagging** and then **Tag policies**\.
+1. In the [AWS Resource Groups console](https://console.aws.amazon.com/resource-groups) navigation pane, choose **Tag policies**\.
+
+   Direct link: [Tag Policies console](https://console.aws.amazon.com/resource-groups/tag-policies/)
 
 1. From the **Tag policies** pane, choose the **Organization root** tab\.
 

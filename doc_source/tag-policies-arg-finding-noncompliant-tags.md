@@ -18,11 +18,11 @@ To find noncompliant tags, you must have the following permissions:
 
 **To evaluate an account's compliance with its effective tag policy \(console\)**
 
-1. While signed in to the account whose compliance you want to check, open Resource Groups\.
+1. While signed in to the account whose compliance you want to check, open the [AWS Resource Groups console](https://console.aws.amazon.com/resource-groups), and then in the navigation pane, choose **Tag policies**\.
 
-1. In the navigation pane, choose **Tagging** and then **Tag policies**\.
+   Direct link: [Tag Policies console](https://console.aws.amazon.com/resource-groups/tag-policies/)
 
-   The **Effective tag policy** section shows when the policy was last updated and the defined tag keys\. You can expand a tag key to see information about its values, case treatment, and whether the values are enforced for specific resources types\.
+1. The **Effective tag policy** section shows when the policy was last updated and the defined tag keys\. You can expand a tag key to see information about its values, case treatment, and whether the values are enforced for specific resources types\.
 **Note**  
 If you're signed in to the master account, you need to choose an account to see its effective policy and view compliance information\.
 

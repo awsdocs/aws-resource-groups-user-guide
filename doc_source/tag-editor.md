@@ -9,9 +9,11 @@ You can add tags to resources when you create the resource\. You can use the res
 
 **To start Tag Editor**
 
-1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/console/home)\.
+1. Sign in to the AWS Management Console\.
 
-1. On the navigation bar, choose **Resource Groups**, and then choose **Tag Editor**\.
+1. On the navigation bar, choose **Services**\. Then, under **Management & Governance**, choose **Resource Groups & Tag Editor**\. In the navigation pane on the left, choose **Tag Editor**\.
+
+   Direct link: [AWS Tag Editor console](https://console.aws.amazon.com/resource-groups/tag-editor/find-resources)
 
 Not all resources can have tags applied\. For information about which resources Tag Editor supports, see [Resources you can use with AWS Resource Groups](supported-resources.md)\. If a resource type that you want to tag is not supported, be sure to let AWS know by choosing the **Feedback** tool in the lower left corner of the console window\.
 

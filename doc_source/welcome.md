@@ -1,9 +1,11 @@
 # What is AWS Resource Groups?<a name="welcome"></a>
 
-You can use *resource groups* to organize your AWS resources\. Resource groups make it easier to manage and automate tasks on large numbers of resources at one time\. This guide shows you how to create and manage resource groups in AWS Resource Groups\.
+You can use *resource groups* to organize your AWS resources\. Resource groups make it easier to manage and automate tasks on large numbers of resources at one time\. This guide shows you how to create and manage resource groups in AWS Resource Groups\. The tasks that you can perform on a resource vary based on the AWS service you're using\. For a list of the services that support AWS Resource Groups and a brief description of what each service allows you to do with a resource group, see [AWS services that work with AWS Resource Groups](integrated-services-list.md)\.
 
 You can access Resource Groups through any of the following entry points\.
-+ On the navigation bar of the [AWS Management Console](https://console.aws.amazon.com/console/home)\.
++ In the [AWS Management Console](https://console.aws.amazon.com/console/home), in the top navigation bar, choose **Services**\. Then, under **Management & Governance**, choose **Resource Groups & Tag Editor**\.
+
+  Direct link: [AWS Resource Groups console](https://console.aws.amazon.com/resource-groups)
 + In the AWS Systems Manager console, from the left navigation pane entry for Resource Groups\.
 + By using the Resource Groups API, in AWS CLI commands or AWS SDK programming languages\.
 
@@ -11,10 +13,11 @@ You can access Resource Groups through any of the following entry points\.
 
 1. Sign in to the AWS Management Console\.
 
-1. On the navigation bar, choose **Resource Groups**\.  
-![\[AWS Management Console home with Resource Groups menu open.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-entry-consolehome.png)
+1. On the navigation bar, choose **Services**\.
 
-1. Choose a resource group from **Saved Groups**, or choose **Create a Group**\.
+1. Under **Management & Governance**, choose **Resource Groups & Tag Editor**\.
+
+1. In the navigation pane on the left, choose **Saved Resource Groups** to work with an existing group, or **Create a Group** to create a new one\.
 
 ## What are resource groups?<a name="resource-groups-intro"></a>
 

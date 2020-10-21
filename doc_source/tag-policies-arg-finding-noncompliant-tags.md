@@ -24,7 +24,7 @@ To find noncompliant tags, you must have the following permissions:
 
 1. The **Effective tag policy** section shows when the policy was last updated and the defined tag keys\. You can expand a tag key to see information about its values, case treatment, and whether the values are enforced for specific resources types\.
 **Note**  
-If you're signed in to the master account, you need to choose an account to see its effective policy and view compliance information\.
+If you're signed in to the management account, you need to choose an account to see its effective policy and view compliance information\.
 
 1. In the **Resources with noncompliant tags** section, specify which Region to search for noncompliant tags\. Optionally, you can also search by resource type\. Then choose **Search resources**\.
 
@@ -60,4 +60,4 @@ Finding and correcting noncompliant tags is an iterative process for multiple re
 + Compliance can change anytime a new resource is created or when new tags are assigned to a resource\. 
 + An account's effective tag policy is updated whenever a tag policy is attached to or detached from it\. The effective tag policy is also updated whenever changes occur to tag the policies the account inherits\.
 
-If you are signed in as the master account in the organization, you can also generate a report\. This report shows information on all tagged resources in your organization's accounts\. For information, see [Evaluating organization\-wide compliance](tag-policies-arg-evaluating-org-wide-compliance.md)\.
+If you are signed in as the management account in the organization, you can also generate a report\. This report shows information on all tagged resources in your organization's accounts\. For information, see [Evaluating organization\-wide compliance](tag-policies-arg-evaluating-org-wide-compliance.md)\.

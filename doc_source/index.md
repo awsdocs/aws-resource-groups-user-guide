@@ -41,5 +41,6 @@ Amazon's trademarks and trade dress may not be used in
       + [Resilience in Resource Groups](security_resilience.md)
       + [Infrastructure Security in Resource Groups](security_infrastructure.md)
       + [Security Best Practices for Resource Groups](security_best-practices.md)
+   + [AWS Resource Groups Reference](reference_available-policies.md)
 + [AWS Resource Groups document history](doc-history.md)
 + [AWS glossary](glossary.md)

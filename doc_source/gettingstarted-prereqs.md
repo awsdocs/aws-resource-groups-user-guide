@@ -93,7 +93,7 @@ To add a policy for using AWS Resource Groups and Tag Editor to a user, do the f
    }
    ```
 **Note**  
-This policy statement grants permissions only for AWS Resource Groups and Tag Editor actions\. It does not allow access to AWS Systems Manager tasks in the AWS Resource Groups console\. For example, this policy does not grant permissions for you to use Systems Manager Automation commands\. To perform Systems Manager tasks on resource groups, you must have Systems Manager permissions attached to your policy \(such as `ssm:*`\)\. For more information about granting access to Systems Manager, see [Configuring access to Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguidesystems-manager-access.html) in the *AWS Systems Manager User Guide*\.
+This policy statement grants permissions only for AWS Resource Groups and Tag Editor actions\. It does not allow access to AWS Systems Manager tasks in the AWS Resource Groups console\. For example, this policy does not grant permissions for you to use Systems Manager Automation commands\. To perform Systems Manager tasks on resource groups, you must have Systems Manager permissions attached to your policy \(such as `ssm:*`\)\. For more information about granting access to Systems Manager, see [Configuring access to Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html) in the *AWS Systems Manager User Guide*\.
 
 1. Choose **Review policy**\.
 

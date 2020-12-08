@@ -6,7 +6,7 @@ This section shows you how to get started with AWS Resource Groups\. First, orga
 
 After you've created resource groups in Resource Groups, use AWS Systems Manager tools such as Automation to simplify management tasks on your groups of resources\. 
 
-For more information about getting started with AWS Systems Manager features and tools, see the [https://docs.aws.amazon.com/systems-manager/latest/userguidewhat-is-systems-manager.html](https://docs.aws.amazon.com/systems-manager/latest/userguidewhat-is-systems-manager.html)\.
+For more information about getting started with AWS Systems Manager features and tools, see the [https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html](https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html)\.
 
 **Topics**
 + [Prerequisites for working with AWS Resource Groups](gettingstarted-prereqs.md)

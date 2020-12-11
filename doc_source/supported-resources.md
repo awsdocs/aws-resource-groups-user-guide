@@ -269,6 +269,13 @@ The following tables list which resources are supported for tag\-based groups, t
 | --- | --- | --- | --- | 
 | AWS::EFS::FileSystem |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 
+## Amazon Elastic Kubernetes Service \(Amazon EKS\)<a name="services-eks"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| AWS::EKS::Cluster |  ☓ No |  ✓ Yes |  ✓ Yes | 
+
 ## Elastic Load Balancing<a name="services-elasticloadbalancing"></a>
 
 
@@ -308,6 +315,17 @@ The following tables list which resources are supported for tag\-based groups, t
 | AWS::Glue::Database |  ☓ No |  ☓ No |  ✓ Yes | 
 | AWS::Glue::Job |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | AWS::Glue::Trigger |  ✓ Yes |  ✓ Yes |  ☓ No | 
+
+## AWS Glue DataBrew<a name="services-databrew"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| AWS::DataBrew::Dataset |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| AWS::DataBrew::Job |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| AWS::DataBrew::Project |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| AWS::DataBrew::Recipe |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| AWS::DataBrew::Schedule |  ☓ No |  ✓ Yes |  ✓ Yes | 
 
 ## AWS Identity and Access Management<a name="services-iam"></a>
 
@@ -411,6 +429,16 @@ The following tables list which resources are supported for tag\-based groups, t
 | AWS::AmazonMQ::Broker |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | AWS::AmazonMQ::Configuration |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
+## Amazon Macie<a name="services-macie"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| AWS::Macie::ClassificationJob |  ☓ No |  ✓ Yes |  ☓ No | 
+| AWS::Macie::CustomDataIdentifier |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| AWS::Macie::FindingsFilter |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| AWS::Macie::Member |  ☓ No |  ✓ Yes |  ☓ No | 
+
 ## Amazon Managed Streaming for Apache Kafka<a name="services-kafka"></a>
 
 
@@ -433,6 +461,9 @@ The following tables list which resources are supported for tag\-based groups, t
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
 | AWS::Organizations::Account |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| AWS::Organizations::OrganizationalUnit |  ☓ No |  ✓ Yes |  ☓ No | 
+| AWS::Organizations::Policy |  ☓ No |  ✓ Yes |  ☓ No | 
+| AWS::Organizations::Root |  ☓ No |  ✓ Yes |  ☓ No | 
 
 ## Amazon Quantum Ledger Database \(Amazon QLDB\)<a name="services-qldb"></a>
 

@@ -75,7 +75,7 @@ The following example shows a CloudTrail log entry that demonstrates the action 
 "responseElements":{
     "Group": {
       "Description":"EC2 instances that we are using for application staging.",
-      "groupArn":"arn:aws:resource-groups:us-west-2:831000000000:group/Staging"
+      "groupArn":"arn:aws:resource-groups:us-west-2:831000000000:group/Staging",
       "Name":"Staging"
      },
     "resourceQuery": {

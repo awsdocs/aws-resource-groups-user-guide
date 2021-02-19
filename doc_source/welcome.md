@@ -1,6 +1,6 @@
 # What is AWS Resource Groups?<a name="welcome"></a>
 
-You can use *resource groups* to organize your AWS resources\. Resource groups make it easier to manage and automate tasks on large numbers of resources at one time\. This guide shows you how to create and manage resource groups in AWS Resource Groups\. The tasks that you can perform on a resource vary based on the AWS service you're using\. For a list of the services that support AWS Resource Groups and a brief description of what each service allows you to do with a resource group, see [AWS services that work with AWS Resource Groups](integrated-services-list.md)\.
+You can use *resource groups* to organize your AWS resources\. AWS Resource Groups is the service that lets you manage and automate tasks on large numbers of resources at one time\. This guide shows you how to create and manage resource groups in AWS Resource Groups\. The tasks that you can perform on a resource vary based on the AWS service you're using\. For a list of the services that support AWS Resource Groups and a brief description of what each service allows you to do with a resource group, see [AWS services that work with AWS Resource Groups](integrated-services-list.md)\.
 
 You can access Resource Groups through any of the following entry points\.
 + In the [AWS Management Console](https://console.aws.amazon.com/console/home), in the top navigation bar, choose **Services**\. Then, under **Management & Governance**, choose **Resource Groups & Tag Editor**\.

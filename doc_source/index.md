@@ -1,7 +1,7 @@
 # AWS Resource Groups User Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -14,7 +14,7 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [What is AWS Resource Groups?](welcome.md)
++ [What are AWS Resource Groups?](welcome.md)
    + [AWS services that work with AWS Resource Groups](integrated-services-list.md)
    + [Resources you can use with AWS Resource Groups](supported-resources.md)
    + [Getting started with AWS Resource Groups](gettingstarted.md)

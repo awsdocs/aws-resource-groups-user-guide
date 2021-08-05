@@ -22,7 +22,7 @@ You can create an empty resource group, but won't be able to perform any tasks o
 
 To make full use of Resource Groups and Tag Editor, you might need additional permissions to tag resources or to see a resource's tag keys and values\. These permissions fall into the following categories: 
 + Permissions for individual services so that you can tag resources from those services and include them in resource groups\.
-+ Permissions that are are required to use the Tag Editor console
++ Permissions that are required to use the Tag Editor console
 + Permissions that are required to use the AWS Resource Groups console and API\. 
 
 If you are an administrator, you can provide permissions for your users by creating policies through the AWS Identity and Access Management \(IAM\) service\. You first create IAM users or groups, and then apply the policies with the permissions that they need\. For information about creating and attaching IAM policies, see [Working with policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html)\.
@@ -38,8 +38,59 @@ To make full use of the Resource Groups feature, you need other permissions that
 
 ### Required permissions for Resource Groups and Tag Editor<a name="gettingstarted-prereqs-permissions-te"></a>
 
-To use Resource Groups and Tag Editor, the following permissions must be added to a user's policy statement in IAM\. The next section describes how to add the required permissions\.
-+ `resource-groups:*` \(This permission allows all Resource Groups actions, but to restrict actions that are available to a user, you can replace the asterisk with a [specific Resource Groups action](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsresourcegroups.html), and add more permissions as required to allow additional, specific actions\.\)
+To use Resource Groups and Tag Editor, the following permissions must be added to a user's policy statement in IAM\. You can add either AWS\-managed policies that are maintained and kept up\-to\-date by AWS, or you can create and maintain your own custom policy\.
+
+#### Using AWS managed policies for Resource Groups & Tag Editor permissions<a name="prereqs-permissions-managedpolicies"></a>
+
+AWS Resource Groups and Tag Editor support the following AWS managed policies that you can use to provide a predefined set of permissions to your users\. You can attach these managed policies to any user, role or group just as you would any other policy that you create\.
+
+**[ResourceGroupsandTagEditorReadOnlyAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess)**  
+This policy grants the attached IAM user or role permission to call the read\-only operations for both Resource Groups and Tag Editor\. To read a resource's tags, you must also have permissions for that resource through a separate policy \(see the following Important note\)\.
+
+**[ResourceGroupsandTagEditorFullAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess)**  
+This policy grants the attached IAM user or role permission to call any Resource Groups operation and the read and write tag operations in Tag Editor\. To read or write a resource's tags, you must also have permissions for that resource through a separate policy \(see the following Important note\)\.
+
+**Important**  
+The two previous policies grant permission to call the Resource Groups and Tag Editor operations and use those consoles\. For Resource Groups operations, those policies are sufficient and grant all the permissions needed to work with any resource in the Resource Groups console\.   
+However, for tagging operations and the Tag Editor console, permissions are more granular\. You must have permissions not only to invoke the operation, but also appropriate permissions to the specific resource whose tags you're trying to access\. To grant that access to the tags, you must also attach one of the following policies:  
+The AWS\-managed policy [ReadOnlyAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/ReadOnlyAccess) grants permissions to the read\-only operations for every service's resources\. AWS automatically keeps this policy up to date with new AWS services as they become available\.
+Many services provide a service\-specific read\-only AWS\-managed policies that you can use to limit access to only the resources provided by that service\. For example, Amazon EC2 provides [AmazonEC2ReadOnlyAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess)\.
+You could create your own policy that grants access to only the very specific read\-only operations for the few services and resources you want your users to access\. This policy use either an "allow list" strategy or a deny list strategy\.  
+An allow list strategy takes advantage of the fact that access is denied by default until you ***explicitly allow*** it in a policy\. So you can use a policy like the following example:  
+
+  ```
+  {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Effect": "Allow",
+              "Action": [
+                  
+              ],
+              "Resource": "?????????"
+          }
+      ]
+  }
+  ```
+Alternatively, you could use a "deny list" strategy that allows access to all resources except those that you explicitly block\.  
+
+  ```
+  {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Effect": "Allow",
+              "Action": [
+                  
+              ],
+              "Resource": "?????????"
+          }
+      ]
+  }
+  ```
+
+#### Adding Resource Groups & Tag Editor permissions manually<a name="prereqs-permissions-manualadd"></a>
++ `resource-groups:*` \(This permission allows all Resource Groups actions\. If you instead want to restrict actions that are available to a user, you can replace the asterisk with a [specific Resource Groups action](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsresourcegroups.html), or to a comma\-separated list of actions\)
 + `cloudformation:DescribeStacks`
 + `cloudformation:ListStackResources`
 + `tag:GetResources`
@@ -63,8 +114,7 @@ To add a policy for using AWS Resource Groups and Tag Editor to a user, do the f
 
 1. Choose **Add permissions**\.
 
-1. Choose **Attach existing policies directly**\.  
-![\[IAM attach policies.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-iam-addperms.png)
+1. Choose **Attach existing policies directly**\.
 
 1. Choose **Create policy**\.
 
@@ -93,12 +143,11 @@ To add a policy for using AWS Resource Groups and Tag Editor to a user, do the f
    }
    ```
 **Note**  
-This policy statement grants permissions only for AWS Resource Groups and Tag Editor actions\. It does not allow access to AWS Systems Manager tasks in the AWS Resource Groups console\. For example, this policy does not grant permissions for you to use Systems Manager Automation commands\. To perform Systems Manager tasks on resource groups, you must have Systems Manager permissions attached to your policy \(such as `ssm:*`\)\. For more information about granting access to Systems Manager, see [Configuring access to Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html) in the *AWS Systems Manager User Guide*\.
+This example policy statement grants permissions only for AWS Resource Groups and Tag Editor actions\. It does not allow access to AWS Systems Manager tasks in the AWS Resource Groups console\. For example, this policy does not grant permissions for you to use Systems Manager Automation commands\. To perform Systems Manager tasks on resource groups, you must have Systems Manager permissions attached to your policy \(such as `ssm:*`\)\. For more information about granting access to Systems Manager, see [Configuring access to Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html) in the *AWS Systems Manager User Guide*\.
 
 1. Choose **Review policy**\.
 
-1. Give the new policy a name and description\. \(for example, `AWSResourceGroupsQueryAPIAccess`\)\.  
-![\[IAM review policy name and description.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-iam-policyname.png)
+1. Give the new policy a name and description\. \(for example, `AWSResourceGroupsQueryAPIAccess`\)\.
 
 1. Choose **Create policy**\.
 

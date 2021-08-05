@@ -6,9 +6,9 @@ After you [find the resources](find-resources-to-tag.md) that you want to tag, y
 Do not store personally identifiable information \(PII\) or other confidential or sensitive information in tags\. We use tags to provide you with billing and administration services\. Tags are not intended to be used for private or sensitive data\.
 
 **Other ways to manage your tags**  
-This topic discusses tagging resources by using the Tag Editor in the AWS console\. However, there are other tools you can use to manage the tags on your AWS resources:  
+This topic discusses tagging resources by using the Tag Editor in the AWS Management Console\. However, there are other tools you can use to manage the tags on your AWS resources:  
 You can type or script commands at your shell prompt by using the [`resourcegroupstaggingapi` commands](https://docs.aws.amazon.com/cli/latest/reference/resourcegroupstaggingapi/index.html#cli-aws-resourcegroupstaggingapi) in the AWS Command Line Interface \(AWS CLI\)\.
-You can create and run PowerShell scripts by using the [AWS Resource Groups tagging API](https://docs.aws.amazon.com/powershell/latest/reference/items/ResourceGroupsTaggingAPI_cmdlets.html) in the AWS Tools for PowerShell\.
+You can create and run PowerShell scripts by using the [AWS Resource Groups Tagging API](https://docs.aws.amazon.com/powershell/latest/reference/items/ResourceGroupsTaggingAPI_cmdlets.html) in the AWS Tools for PowerShell\.
 You can create and run programs with any of the available [AWS SDKs](https://docs.aws.amazon.com/index.html#sdks) by using the [Resource groups tagging APIs](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/), such as the [tagging APIs for Python](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/resourcegroupstaggingapi.html) or the [tagging APIs for Java](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ResourceGroupsTaggingAPI.html)\.
 
 When you add, remove, or edit existing tags, you are changing tags only on those resources that you select in of the results of your **Find resources to tag** query\. You can select up to 500 resources on which to manage tags\.
@@ -24,10 +24,13 @@ When you add, remove, or edit existing tags, you are changing tags only on those
 
 You can use Tag Editor to add tags to selected resources that are in the results of your **Find resources to tag** query\.
 
+**Note**  
+This topic describes how to bulk edit the tags for *multiple* resources\. You can also edit the tag values for an individual resource\. For more information, see [View and edit tags for a selected resource](find-resources-to-tag.md#tagging-resources-view)\.
+
 1. In the results of your **Find resources to tag** query, select the check boxes next to the resources you want to add tags to\. Enter a text string in **Filter resources** to filter for part of a resource's name, ID, tag keys, or tag values\. In the **Tags** column, note that resources in the results already have tags applied to them\. In the following example, the first selected EC2 instance already has two tags\.  
 ![\[Find resources query results with resources selected.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/te_findresources_results.png)
 
-1. Choose **Manage tags of the selected resources**\.
+1. Check the box for one or more resources, and then choose **Manage tags of the selected resources**\.
 
 1. On the **Manage tags** page, view the tags on the resources that you selected\. Although your original query returned more resources, note that you are adding tags only to the resources that you selected in step 1\. Choose **Add tag**\.  
 ![\[Manage tags page, editing tags of a selected resource.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/te_manage_tags_selected.png)

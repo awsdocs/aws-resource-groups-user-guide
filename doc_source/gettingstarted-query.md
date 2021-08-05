@@ -3,6 +3,7 @@
 **Topics**
 + [Types of resource group queries](#getting_started-query_types)
 + [Build a tag\-based query and create a group](#gettingstarted-query-tag-based)
++ [Create an AWS CloudFormation stack\-based group](#gettingstarted-query-stack-based)
 
 ## Types of resource group queries<a name="getting_started-query_types"></a>
 
@@ -14,6 +15,7 @@ For a tag\-based query, you also specify the tags that are shared by the resourc
 
 **AWS CloudFormation stack\-based**  
 In an AWS CloudFormation stack\-based query, you choose an AWS CloudFormation stack in your account in the current region, and then choose resource types in the stack that you want to be in the group\. You can base your query on only one AWS CloudFormation stack\. Resource Groups supports queries based on AWS CloudFormation stacks that have one of the following statuses\.  
+Only resources that are directly created as part of the stack in the query are included in the resource group\. Resources created later by members of the group do not become members of the group\. For example, if an auto\-scaling group is created by AWS CloudFormation as part of the stack, then that auto\-scaling group ***is*** a member of the group\. However, an Amazon EC2 instance created by that auto\-scaling group as part of its operation ***is not*** a member of the AWS CloudFormation stack\-based resource group\. 
 If you create a group based on an AWS CloudFormation stack, and the stack's status changes to one that is no longer supported as a basis for a group query, such as `DELETE_COMPLETE`, the group still exists, but it has no member resources\.  
 + `CREATE_COMPLETE`
 + `CREATE_IN_PROGRESS`
@@ -103,7 +105,7 @@ A tag\-based group is based on a query of type `TAG_FILTERS_1_0`\.
 
 ------
 
-### Create an AWS CloudFormation stack\-based group<a name="gettingstarted-query-stack-based"></a>
+## Create an AWS CloudFormation stack\-based group<a name="gettingstarted-query-stack-based"></a>
 
 The following procedures show you how to build a stack\-based query and use it to create a resource group\.
 

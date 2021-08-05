@@ -1,4 +1,4 @@
-# What is AWS Resource Groups?<a name="welcome"></a>
+# What are AWS Resource Groups?<a name="welcome"></a>
 
 You can use *resource groups* to organize your AWS resources\. AWS Resource Groups is the service that lets you manage and automate tasks on large numbers of resources at one time\. This guide shows you how to create and manage resource groups in AWS Resource Groups\. The tasks that you can perform on a resource vary based on the AWS service you're using\. For a list of the services that support AWS Resource Groups and a brief description of what each service allows you to do with a resource group, see [AWS services that work with AWS Resource Groups](integrated-services-list.md)\.
 
@@ -27,7 +27,7 @@ In AWS, a *resource* is an entity that you can work with\. Examples include an A
 + Opening or closing ports to network traffic\.
 + Collecting specific log and monitoring data from your fleet of instances\.
 
-A *resource group* is a collection of AWS resources that are all in the same AWS region, and that match criteria provided in a query\. In Resource Groups, there are two types of queries on which you can build a group\. Both query types include resources that are specified in the format `AWS::service::resource`\.
+A *resource group* is a collection of AWS resources that are all in the same AWS Region, and that match the criteria specified in the group's query\. In Resource Groups, there are two types of queries you can use to build a group\. Both query types include resources that are specified in the format `AWS::service::resource`\.
 + **Tag\-based**
 
   Tag\-based queries include lists of resources and tags\. *Tags* are keys that help identify and sort your resources within your organization\. Optionally, tags include values for keys\.
@@ -47,7 +47,7 @@ By default, the AWS Management Console is organized by AWS service\. But with Re
 + A set of AWS resources that you use together for a common project or that you want to manage or monitor as a group\.
 + A set of resources related to applications that run on a specific platform, such as Android or iOS\.
 
-For example, you are developing a web application, and you are maintaining separate sets of resources for your alpha, beta, and release stages\. Each version runs on Amazon EC2 with an Amazon Elastic Block Store storage volume\. You use Elastic Load Balancing to manage traffic and Route 53 to manage your domain\. Without Resource Groups, you might have to access multiple consoles just to check the status of your services or modify the settings for one version of your application\.
+For example, you are developing a web application, and you are maintaining separate sets of resources for your alpha, beta, and release stages\. Each version runs on Amazon EC2 with an Amazon Elastic Block Store storage volume\. You use Elastic Load Balancing to manage traffic and Route 53 to manage your domain\. Without Resource Groups, you might have to access multiple consoles just to check the status of your services or modify the settings for one version of your application\.
 
 With Resource Groups, you use a single page to view and manage your resources\. For example, let’s say you use the tool to create a resource group for each version—alpha, beta, and release—of your application\. To check your resources for the alpha version of your application, open your resource group\. Then view the consolidated information on your resource group page\. To modify a specific resource, choose the resource's links on your resource group page to access the service console that has the settings that you need\.
 

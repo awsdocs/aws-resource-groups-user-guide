@@ -1,13 +1,13 @@
-# Resources you can use with AWS Resource Groups<a name="supported-resources"></a>
+# Resources you can use with AWS Resource Groups and Tag Editor<a name="supported-resources"></a>
 
-You can use the AWS Management Console or the AWS CLI to add tags to many AWS resources\. This topic describes resources that you can query and group into resource groups by using AWS Resource Groups, and resources that you can tag by using Tag Editor\.
+You can use the AWS Management Console or the AWS CLI to create resource groups and then interact with the member resources through those groups\. You can add tags to many AWS resources and then use those tags to manage group membership\. This topic describes the AWS resources that you can include in resource groups by using AWS Resource Groups, and the AWS resources that you can tag by using Tag Editor\.
 
 **Important**  
-A resource group based on a query for **All supported resource types** can add members automatically over time, as new resources are supported by Resource Groups\. When you run automations or other bulk tasks on an existing resource group based on **All supported resource types**, be aware that the actions might be run on many more resources than were in the group when you first created it\. This might also mean that automations or tasks that you created for other resources are applied to unintended resources, or resources on which the tasks cannot be completed\.  
+A resource group based on a query for **All supported resource types** can add members automatically over time, as new resources are supported by Resource Groups\. When you run automations or other bulk tasks on an existing resource group based on **All supported resource types**, be aware that the actions might run on many more resources than were in the group when you first created the group\. This might also mean that automations or tasks that you created for other resources are applied to possibly unintended resources, or resources on which the tasks cannot be successfully completed\. in those cases, you can add a resource type filter to specify that only resources of the specified types can be part of the group\.  
 
 ![\[Query based on All supported resource types.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/rg-allsupported-resources.png)
 
-The following tables list which resources are supported for tag\-based groups, tagging in Tag Editor, and for AWS CloudFormation stack\-based groups\. 
+The following tables list which resource types are supported for tagging in Tag Editor, for membership in tag query\-based groups, and for membership in AWS CloudFormation stack\-based groups\. 
 
 **Note**  
 Adding tags to a AWS CloudFormation stack causes an update of the stack\.
@@ -46,7 +46,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| `AWS::Braket::QuantumTask` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::Braket::QuantumTask` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
 ## AWS Certificate Manager<a name="services-certificatemanager"></a>
 
@@ -252,7 +252,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | `AWS::EC2::Instance` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::InternetGateway` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::LaunchTemplate` |  ☓ No |  ✓ Yes |  ✓ Yes | 
-| `AWS::EC2::NatGateway` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::EC2::NatGateway` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::NetworkAcl` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::NetworkInterface` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::ReservedInstance` |  ✓ Yes |  ✓ Yes |  ☓ No | 
@@ -394,12 +394,12 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| `AWS::IAM::InstanceProfile` |  ☓ No |  ✓ Yes |  ☓ No | 
-| `AWS::IAM::ManagedPolicy` |  ☓ No |  ✓ Yes |  ☓ No | 
-| `AWS::IAM::OpenIDConnectProvider` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::IAM::InstanceProfile` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::IAM::ManagedPolicy` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::IAM::OpenIDConnectProvider` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | `AWS::IAM::Role` |  ☓ No |  ☓ No |  ✓ Yes | 
-| `AWS::IAM::SAMLProvider` |  ☓ No |  ✓ Yes |  ☓ No | 
-| `AWS::IAM::ServerCertificate` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::IAM::SAMLProvider` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::IAM::ServerCertificate` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | `AWS::IAM::VirtualMFADevice` |  ☓ No |  ✓ Yes |  ☓ No | 
 
 ## Amazon Inspector<a name="services-inspector"></a>
@@ -514,6 +514,13 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | --- | --- | --- | --- | 
 | `AWS::Kafka::Cluster` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
+## Amazon Elasticsearch Service OpenSearch<a name="services-opensearchservice"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::OpenSearchService::Domain` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+
 ## AWS OpsWorks<a name="services-opsworks"></a>
 
 
@@ -581,7 +588,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| `AWS::ResourceGroups::Group` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::ResourceGroups::Group` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 
 ## AWS Robomaker<a name="services-robomaker"></a>
 

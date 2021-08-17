@@ -16,7 +16,7 @@ If you do not have an AWS account, complete the following steps to create one\.
 
 ## Create resources<a name="gettingstarted-prereqs-create"></a>
 
-You can create an empty resource group, but won't be able to perform any tasks on resource group members until there are resources in the group\. For more information about the supported resource types, see [Resources you can use with AWS Resource Groups](supported-resources.md)\.
+You can create an empty resource group, but won't be able to perform any tasks on resource group members until there are resources in the group\. For more information about the supported resource types, see [Resources you can use with AWS Resource Groups and Tag Editor](supported-resources.md)\.
 
 ## Set up permissions<a name="gettingstarted-prereqs-permissions"></a>
 
@@ -32,7 +32,7 @@ If you are an administrator, you can provide permissions for your users by creat
 **Important**  
 This section describes permissions that are required if you want to tag resources from other service consoles and APIs, and add those resources to resource groups\.
 
-As described in [What are resource groups?](welcome.md#resource-groups-intro), each resource group represents a collection of resources of specified types that share one or more tag keys or values\. To add tags to a resource, you need the permissions required for the service to which the resource belongs\. For example, to tag Amazon EC2 instances, your must have permissions to the tagging actions in that service's API, such as those listed in the [Amazon EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#Using_Tags_CLI)\.
+As described in [What are resource groups?](resource-groups.md#resource-groups-intro), each resource group represents a collection of resources of specified types that share one or more tag keys or values\. To add tags to a resource, you need the permissions required for the service to which the resource belongs\. For example, to tag Amazon EC2 instances, your must have permissions to the tagging actions in that service's API, such as those listed in the [Amazon EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#Using_Tags_CLI)\.
 
 To make full use of the Resource Groups feature, you need other permissions that allow you to access a service's console and interact with the resources there\. For examples of such policies for Amazon EC2, see [Example policies for working in the Amazon EC2 console](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-ec2-console.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
@@ -40,7 +40,7 @@ To make full use of the Resource Groups feature, you need other permissions that
 
 To use Resource Groups and Tag Editor, the following permissions must be added to a user's policy statement in IAM\. You can add either AWS\-managed policies that are maintained and kept up\-to\-date by AWS, or you can create and maintain your own custom policy\.
 
-#### Using AWS managed policies for Resource Groups & Tag Editor permissions<a name="prereqs-permissions-managedpolicies"></a>
+#### Using AWS managed policies for Resource Groups and Tag Editor permissions<a name="prereqs-permissions-managedpolicies"></a>
 
 AWS Resource Groups and Tag Editor support the following AWS managed policies that you can use to provide a predefined set of permissions to your users\. You can attach these managed policies to any user, role or group just as you would any other policy that you create\.
 
@@ -89,7 +89,7 @@ Alternatively, you could use a "deny list" strategy that allows access to all re
   }
   ```
 
-#### Adding Resource Groups & Tag Editor permissions manually<a name="prereqs-permissions-manualadd"></a>
+#### Adding Resource Groups and Tag Editor permissions manually<a name="prereqs-permissions-manualadd"></a>
 + `resource-groups:*` \(This permission allows all Resource Groups actions\. If you instead want to restrict actions that are available to a user, you can replace the asterisk with a [specific Resource Groups action](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsresourcegroups.html), or to a comma\-separated list of actions\)
 + `cloudformation:DescribeStacks`
 + `cloudformation:ListStackResources`

@@ -1,4 +1,4 @@
-# Evaluating compliance for an account<a name="tag-policies-arg-finding-noncompliant-tags"></a>
+# Evaluating compliance for an account<a name="tag-policies-orgs-finding-noncompliant-tags"></a>
 
 You can evaluate the compliance of an account in your organization with its effective tag policy\.
 
@@ -60,4 +60,4 @@ Finding and correcting noncompliant tags is an iterative process for multiple re
 + Compliance can change anytime a new resource is created or when new tags are assigned to a resource\. 
 + An account's effective tag policy is updated whenever a tag policy is attached to or detached from it\. The effective tag policy is also updated whenever changes occur to tag the policies the account inherits\.
 
-If you are signed in as the management account in the organization, you can also generate a report\. This report shows information on all tagged resources in your organization's accounts\. For information, see [Evaluating organization\-wide compliance](tag-policies-arg-evaluating-org-wide-compliance.md)\.
+If you are signed in as the management account in the organization, you can also generate a report\. This report shows information on all tagged resources in your organization's accounts\. For information, see [Evaluating organization\-wide compliance](tag-policies-orgs-evaluating-org-wide-compliance.md)\.

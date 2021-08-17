@@ -1,4 +1,4 @@
-# Evaluating organization\-wide compliance<a name="tag-policies-arg-evaluating-org-wide-compliance"></a>
+# Evaluating organization\-wide compliance<a name="tag-policies-orgs-evaluating-org-wide-compliance"></a>
 
 You can generate a report that lists all tagged resources in accounts across your organization and whether each resource is compliant with the effective tag policy\.
 
@@ -19,7 +19,7 @@ To generate an organization\-wide compliance report, you must have the following
 
    Direct link: [Tag Policies console](https://console.aws.amazon.com/resource-groups/tag-policies/)
 
-1. From the **Tag policies** pane, choose the **Organization root** tab\.
+1. From the **Tag policies** pane, choose the **This organization root** tab\.
 
 1. Near the bottom of the page, choose **Generate report**\.
 

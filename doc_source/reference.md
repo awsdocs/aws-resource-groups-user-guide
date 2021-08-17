@@ -1,8 +1,15 @@
-# AWS Resource Groups Reference<a name="reference_available-policies"></a>
+# AWS Resource Groups Reference<a name="reference"></a>
 
 Use the topics in this section to find reference information for various aspects of AWS Resource Groups\.
 
-## AWS managed policies available for use with AWS Resource Groups<a name="ref-managed-policies"></a>
+## Service quotas for Resource Groups<a name="arg-reference-quotas"></a>
+
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/ARG/latest/userguide/reference.html)
+
+**Note**  
+You can request changes to quotas marked as adjustable by using the [AWS Resource Groups page in the Service Quotas console](https://console.aws.amazon.com/servicequotas/home/services/resource-groups/quotas)\.
+
+## AWS managed policies available for use with AWS Resource Groups<a name="arg-reference-managed-policies"></a>
 
 [AWS\-managed IAM permission policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) enable you to grant pre\-configured permissions to the IAM users and roles in your account\. AWS managed policies are tested and adhere to best practice recommendations, so you can reliably use them in the scenarios for which they're define\. As new resource types are supported as members of resource groups, and as new resource types support tagging, AWS automically updates these policies to support them\. You don't need to do anything\.
 

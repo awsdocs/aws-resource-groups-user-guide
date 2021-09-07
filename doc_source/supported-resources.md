@@ -110,6 +110,14 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | --- | --- | --- | --- | 
 | `AWS::Logs::LogGroup` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 
+## AWS CodeArtifact<a name="services-codeartifact"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::CodeArtifact::Domain` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::CodeArtifact::Repository` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+
 ## AWS CodeBuild<a name="services-codebuild"></a>
 
 
@@ -317,7 +325,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | `AWS::ElasticLoadBalancingV2::LoadBalancer` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::ElasticLoadBalancingV2::TargetGroup` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 
-## Amazon Elasticsearch Service<a name="services-elasticsearch"></a>
+## Amazon OpenSearch Service<a name="services-elasticsearch"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
@@ -514,7 +522,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | --- | --- | --- | --- | 
 | `AWS::Kafka::Cluster` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
-## Amazon Elasticsearch Service OpenSearch<a name="services-opensearchservice"></a>
+## Amazon OpenSearch Service OpenSearch<a name="services-opensearchservice"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
@@ -671,6 +679,16 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | --- | --- | --- | --- | 
 | `AWS::ServiceQuotas::Quota` |  ☓ No |  ✓ Yes |  ☓ No | 
 
+## Amazon Simple Email Service<a name="services-ses"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::SES::ConfigurationSet` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::SES::ContactList` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::SES::DedicatedIpPool` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::SES::Identity` |  ☓ No |  ✓ Yes |  ☓ No | 
+
 ## Amazon Simple Notification Service<a name="services-sns"></a>
 
 
@@ -700,7 +718,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | `AWS::StepFunctions::Activity` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::StepFunctions::StateMachine` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 
-## AWS Storage Gateway<a name="services-storagegateway"></a>
+## Storage Gateway<a name="services-storagegateway"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 

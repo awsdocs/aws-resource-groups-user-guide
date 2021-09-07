@@ -2,7 +2,7 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Added support for resources of Amazon Elasticsearch Service OpenSearch](#doc-history) | AWS Resource Groups now supports including resources for Amazon Elasticsearch Service OpenSearch in a resource group\. | August 11, 2021 | 
+| [Added support for resources of Amazon OpenSearch Service OpenSearch](#doc-history) | AWS Resource Groups now supports including resources for Amazon OpenSearch Service OpenSearch in a resource group\. | August 11, 2021 | 
 | [Added support for resources of AWS Braket](#doc-history) | AWS Resource Groups now supports including resources for AWS Braket in a resource group\. | June 30, 2021 | 
 | [Added support for resources of Amazon EMR Containers](#doc-history) | AWS Resource Groups now supports including resources for Amazon EMR containers in a resource group\. | April 27, 2021 | 
 | [Added support for resources of additional AWS services](#doc-history) | AWS Resource Groups now supports including resources for the following services in a resource group: Amazon CodeGuru Reviewer, Amazon Elastic Inference, Amazon Forecast, Amazon Fraud Detector, and Service Quotas\. | February 25, 2021 | 

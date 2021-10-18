@@ -46,36 +46,28 @@ The following example IAM permission policy shows how to force the user who crea
 ```
 
 **Example 2: Use tags to limit access to a resource to its "owner"**  
-The following example IAM permission policy lets the user attach a role to an Amazon EC2 instance profile only if that user is tagged as the owner of the role\.  
+The following example IAM permission policy lets the user stop a running Amazon EC2 instance only if the user is tagged as the owner of that instance\.  
 This example is an example of "attribute\-based access control"\. For more information and additional examples of using IAM policies to implement an tag\-based access control strategy, see [Controlling access to AWS resources using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) and [Controlling access to and for IAM users and roles using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html), both in the *IAM User Guide*\. There is also a much more comprehensive tutorial that shows how to grant access to different projects and groups using multiple tags at [IAM tutorial: Define permissions to access AWS resources based on tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_attribute-based-access-control.html)  
 
 ```
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AddRoleToInstanceProfile",
-            "Effect": "Allow",
-            "Action": [
-                "iam:AddRoleToInstanceProfile",
-                "iam:PassRole"
-            ],
-            "Resource": [
-                "arn:aws:iam::123456789012:instance-profile/*",
-                "arn:aws:iam::123456789012:role/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "aws:ResourceTag/Owner": "${aws:username}"
-                }
-            }
-        },
-        {
-            "Sid": "AssociateInstanceProfile",
-            "Effect": "Allow",
-            "Action": "ec2:AssociateIamInstanceProfile",
-            "Resource": "arn:aws:ec2:us-east-1:123456789012:instance/*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:StopInstances"
+      ],
+      "Resource": [
+        "arn:aws:iam::123456789012:instance/*"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/Owner": "${aws:username}"
         }
-    ]
+      }
+    }
+  ]
 }
 ```

@@ -6,7 +6,7 @@ After you find resources to tag, you can use Tag Editor to add tags, or view, ed
 
 **To find resources to tag**
 
-1. Sign in to the [AWS Management Console](), choose **Resource Groups**, and then choose **Tag Editor**\.
+1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/resource-groups), choose **Resource Groups**, and then choose **Tag Editor**\.
 
 1. *\(optional\)* Choose regions in which to search for resources to tag\. By default, your current region is selected\. For this walkthrough, choose **us\-east\-1** and **us\-west\-2**\.  
 ![\[Find resources to tag page with us-east-1 and us-west-2 selected as regions.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/te_findresources_regions.png)

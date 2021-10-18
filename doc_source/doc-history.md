@@ -2,6 +2,7 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added support for resource groups that are configured and managed by AWS Service Catalog App Registry](#doc-history) | AWS Resource Groups now supports resource groups that contain service configurations for resources in applications that you create by usingAWS Service Catalog App Registry\. For more information, see [Service Configurations](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types) in the *AWS Resource Groups API Reference*\. | September 15, 2021 | 
 | [Added support for resources of Amazon OpenSearch Service OpenSearch](#doc-history) | AWS Resource Groups now supports including resources for Amazon OpenSearch Service OpenSearch in a resource group\. | August 11, 2021 | 
 | [Added support for resources of AWS Braket](#doc-history) | AWS Resource Groups now supports including resources for AWS Braket in a resource group\. | June 30, 2021 | 
 | [Added support for resources of Amazon EMR Containers](#doc-history) | AWS Resource Groups now supports including resources for Amazon EMR containers in a resource group\. | April 27, 2021 | 

@@ -64,7 +64,7 @@ An allow list strategy takes advantage of the fact that access is denied by defa
       "Statement": [
           {
               "Effect": "Allow",
-              "Action": [ "resourcegroups:*" ],
+              "Action": [ "resource-groups:*" ],
               "Resource": "arn:aws:resource-groups:*:123456789012:group/*"
           }
       ]
@@ -78,7 +78,7 @@ Alternatively, you could use a "deny list" strategy that allows access to all re
       "Statement": [
           {
               "Effect": "Deny",
-               "Action": [ "resourcegroups:*" ],
+               "Action": [ "resource-groups:*" ],
               "Resource": "arn:aws:resource-groups:*:123456789012:group/*"
           }
       ]

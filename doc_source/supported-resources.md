@@ -115,8 +115,8 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| `AWS::CodeArtifact::Domain` |  ☓ No |  ✓ Yes |  ✓ Yes | 
-| `AWS::CodeArtifact::Repository` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::CodeArtifact::Domain` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+| `AWS::CodeArtifact::Repository` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 
 ## AWS CodeBuild<a name="services-codebuild"></a>
 
@@ -610,7 +610,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | `AWS::RoboMaker::SimulationApplication` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | `AWS::RoboMaker::SimulationJob` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
-## Amazon Route 53<a name="services-route53"></a>
+## Amazon Route 53<a name="services-route53"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
@@ -623,7 +623,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
 ² This is a resource for a global service that is hosted in the **US East \(N\. Virginia\)** Region\. Because Resource Groups are maintained separately for each region, you must switch your AWS Management Console to the AWS Region that contains the resources you want to include in the group\. To create a resource group that contains a global resource, you must configure your AWS Management Console to **US East \(N\. Virginia\) us\-east\-1** using the Region selector in the upper\-right corner of the AWS Management Console\.
 
-## Amazon Route 53 Resolver<a name="services-route53resolver"></a>
+## Amazon Route 53 Resolver<a name="services-route53resolver"></a>
 
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
@@ -684,10 +684,10 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| `AWS::SES::ConfigurationSet` |  ☓ No |  ✓ Yes |  ✓ Yes | 
-| `AWS::SES::ContactList` |  ☓ No |  ✓ Yes |  ✓ Yes | 
-| `AWS::SES::DedicatedIpPool` |  ☓ No |  ✓ Yes |  ☓ No | 
-| `AWS::SES::Identity` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::SES::ConfigurationSet` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+| `AWS::SES::ContactList` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+| `AWS::SES::DedicatedIpPool` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::SES::Identity` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
 ## Amazon Simple Notification Service<a name="services-sns"></a>
 

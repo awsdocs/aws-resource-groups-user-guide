@@ -548,6 +548,17 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | `AWS::Organizations::Policy` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::Organizations::Root` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
+## Amazon Pinpoint<a name="services-pinpoint"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::Pinpoint::App` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::Pinpoint::EmailTemplate` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::Pinpoint::PushTemplate` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::Pinpoint::SmsTemplate` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::Pinpoint::VoiceTemplate` |  ☓ No |  ✓ Yes |  ☓ No | 
+
 ## Amazon Quantum Ledger Database \(Amazon QLDB\)<a name="services-qldb"></a>
 
 
@@ -653,6 +664,7 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | `AWS::SageMaker::LabelingJob` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SageMaker::Model` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 | `AWS::SageMaker::NotebookInstance` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+| `AWS::SageMaker::Pipeline` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SageMaker::TrainingJob` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SageMaker::TransformJob` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SageMaker::Workteam` |  ☓ No |  ✓ Yes |  ☓ No | 

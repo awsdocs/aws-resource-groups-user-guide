@@ -117,7 +117,7 @@ Resource Groups does not support resource\-based policies\.
 
 ## Authorization Based on Resource Groups Tags<a name="security_iam_tags"></a>
 
-You can attach tags to groups in Resource Groups, or pass tags in a request to Resource Groups\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `aws:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. You can apply tags to a group when you are creating or updating the group\. For more information about tagging a group in Resource Groups, see [Build queries and groups in AWS Resource Groups](gettingstarted-query.md) and [Update groups in AWS Resource Groups](updating-resource-groups.md) in this guide\.
+You can attach tags to groups in Resource Groups, or pass tags in a request to Resource Groups\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `aws:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. You can apply tags to a group when you are creating or updating the group\. For more information about tagging a group in Resource Groups, see [Creating query\-based groups in AWS Resource Groups](gettingstarted-query.md) and [Updating groups in AWS Resource Groups](updating-resource-groups.md) in this guide\.
 
 To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Viewing Groups Based on Tags](security_iam_id-based-policy-examples.md#security_iam_policy-examples-view-tags)\.
 

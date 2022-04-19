@@ -1,4 +1,4 @@
-# What are tags?<a name="tagging"></a>
+# Tagging your AWS resources<a name="tagging"></a>
 
 Tags are key and value pairs that act as metadata for organizing your AWS resources\. With most AWS resources, you have the option of adding tags when you create the resource, whether it's an Amazon EC2 instance, an Amazon S3 bucket, or other resource\. However, you can also add tags to multiple, supported resources at once by using Tag Editor\. You build a query for resources of various types, and then add, remove, or replace tags for the resources in your search results\. Tag\-based queries assign an `AND` operator to tags, so any resource that matches the specified resource types and all specified tags is returned by the query\.
 

@@ -9,6 +9,11 @@ A resource group based on a query for **All supported resource types** can add m
 
 The following tables list which resource types are supported for tagging in Tag Editor, for membership in tag query\-based groups, and for membership in AWS CloudFormation stack\-based groups\. 
 
+**Column definitions**
++ **Tag Editor Tagging** – You can tag resources of this type by using the [Tag Editor console](https://console.aws.amazon.com/resource-groups/tag-editor/)\. Otherwise, you must use either the [AWS Resource Groups Tagging API](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/overview.html) or the tagging services supported natively by that resource’s owning service\.
++ **Tag\-based Groups** – You can include resources of this type in [resource groups whose membership is determined by the tags attached to the resources](https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-tag-based)\. The group specifies tag key names and values, and any resources with tags that match are automatically part of the group
++ **AWS CloudFormation Stack\-based Groups** – You can include resources of this type in [resource groups whose membership consists of the resources created as part of a CloudFormation stack](https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-stack-based)\. The group specifies the stack’s ARN, and all of its resources are automatically members of the group\.
+
 **Note**  
 Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 

@@ -39,6 +39,7 @@ It can take up to 48 hours for changes to a tag policy or resources to be reflec
 Although you can generate the report at any time, report results aren't updated until the next evaluation is complete\.
 The **NoncompliantKeys** column lists tag keys on the resource that are noncompliant with the effective tag policy\.
 The **KeysWithNonCompliantValues** column lists keys defined in the effective policy that are on the resource with either incorrect case treatment or noncompliant values\. 
+If you close an AWS account that was a member of the organization, it can continue to appear in the tag compliance report for up to 90 days\.
 
 **To generate an organization\-wide compliance report \(AWS CLI, AWS API\)**  
 Use the following commands and operations to generate an organization\-wide compliance report, check on its status, and view the report:

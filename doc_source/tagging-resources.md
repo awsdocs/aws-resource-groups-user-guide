@@ -110,8 +110,6 @@ Choosing **Remove tag** removes a tag from all selected resources that have the 
 
 If tag changes fail on at least one of your selected resources, Tag Editor displays a red banner at the bottom of the page\. The banner shows error messages for each type of failure that occurred\. For each error, the banner identifies the specific resources on which Tag Editor could not make tag changes\. After you review and [troubleshoot the errors](troubleshooting-tags.md), choose **Retry failed tag changes on resources** to retry changes only on those resources on which tag changes failed\.
 
-![\[Manage tags results, retry failed tag changes on some resources.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/te_retry_failed_tag_changes_resources.png)
-
 ## Related information<a name="related-info-manage-tags"></a>
 + [AWS tagging strategies](http://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
 + [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)

@@ -102,7 +102,7 @@ To use Resource Groups and Tag Editor in the console, you also need permission t
 
 To add a policy for using AWS Resource Groups and Tag Editor to a user, do the following\.
 
-1. Open the [IAM console]()\.
+1. Open the [IAM console](https://console.aws.amazon.com/iam)\.
 
 1. In the navigation pane, choose **Users**\.
 

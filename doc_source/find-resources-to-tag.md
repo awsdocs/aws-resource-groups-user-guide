@@ -20,7 +20,7 @@ After you find resources to tag, you can use Tag Editor to add tags, or view, ed
 
    Leave the **Tags** boxes empty to find all resources of the specified type in the current AWS Region\. This query returns resources that have any tags, and includes those that have no tags\. To remove a tag from your query, choose **X** on the tag's label\.
 
-   To find resources that have an empty value for a tag, choose **\(empty value\)** when your cursor is in the tag value box\. To find resources that have a tag key but no tag value, choose **\(not tagged\)**\.  
+   To find resources that have an empty value for a tag, choose **\(empty value\)** when your cursor is in the tag value box\.   
 ![\[Find resources to tag page with empty value chosen as the tag value.\]](http://docs.aws.amazon.com/ARG/latest/userguide/images/te_findresource_emptyvalue.png)
 **Note**  
 Before you can find resources with the specified tags, they must have been applied to at least one resource of the specified type in the current AWS Region\.

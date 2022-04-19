@@ -1,4 +1,4 @@
-# Update groups in AWS Resource Groups<a name="updating-resource-groups"></a>
+# Updating groups in AWS Resource Groups<a name="updating-resource-groups"></a>
 
 To update a tag\-based resource group in Resource Groups, you can edit the query and tags that are the basis of your group\. You can add and remove resources from your group only by applying changes to the query or tags\. You cannot select specific resources to add to or remove from your group\. The best way to add or remove a specific resource from a group is to edit the resource's tags\. Then verify that your resource group tag query either includes or omits the tag, depending on whether you want the resource in your group\.
 
@@ -95,7 +95,7 @@ You cannot change an AWS CloudFormation stack\-based group to a tag\-based group
 **Note**  
 You can update only resource groups that you own\. The **Owner** column shows account ownership for each resource group\. Any groups with an account owner other than the one you're signed in to were created in AWS License Manager\. For more information, see [Host resource groups in AWS License Manager](https://docs.aws.amazon.com/license-manager/latest/userguide/host-resource-groups.html) in the *License Manager User Guide*\. 
 
-1. On the **Edit group** page, under **Grouping criteria**, to change the stack on which your group is based, choose the stack from the drop\-down list\. A resource group can be based on only one stack\. To filter the list of stacks, start typing the name of the stack\. Only stacks with supported statuses appear in the list\. For a list of supported statuses, see [Build queries and groups in AWS Resource Groups](gettingstarted-query.md) in this guide\.
+1. On the **Edit group** page, under **Grouping criteria**, to change the stack on which your group is based, choose the stack from the drop\-down list\. A resource group can be based on only one stack\. To filter the list of stacks, start typing the name of the stack\. Only stacks with supported statuses appear in the list\. For a list of supported statuses, see [Creating query\-based groups in AWS Resource Groups](gettingstarted-query.md) in this guide\.
 
 1. Add or remove resource types\. Only resource types that are available in the stack are shown in the drop\-down list\. The default is **All supported resource types**\. You can have a maximum of 20 resource types in a query\. To remove a resource type, choose **X** on the resource type's label\. For more information about which resource types are supported and can be in the group, see [Resources you can use with AWS Resource Groups and Tag Editor](supported-resources.md)\.
 

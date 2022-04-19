@@ -1,4 +1,4 @@
-# Build queries and groups in AWS Resource Groups<a name="gettingstarted-query"></a>
+# Creating query\-based groups in AWS Resource Groups<a name="gettingstarted-query"></a>
 
 **Topics**
 + [Types of resource group queries](#getting_started-query_types)
@@ -72,7 +72,7 @@ The syntax of the `ResourceQuery` parameter of a CloudFormation stack\-based res
   To create a AWS CloudFormation stack\-based resource group, specify the value `CLOUDFORMATION_STACK_1_0`, as follows:
 
   ```
-  "Type": "CLOUDFORMATION__STACK_1_0"
+  "Type": "CLOUDFORMATION_STACK_1_0"
   ```
 +  `Query` 
 
@@ -98,13 +98,13 @@ All of these JSON elements must be combined into a single\-line string represent
 That JSON can be represented as the following single\-line string, and used as the value of the `Query` element\. Because the value of a JSON structure must be a double\-quoted string, you must escape any embedded double\-quote characters or forward slash characters by preceding each with a backslash as shown here:
 
 ```
-"Query":"{\"ResourceTypeFilters\":[\"AWS::S3::Bucket"\"],\"StackIdentifier\":\"arn:aws:cloudformation:us-west-2:123456789012:stack\/MyCloudFormationStackName\/fb0d5000-aba8-00e8-aa9e-50d5cEXAMPLE\"
+"Query":"{\"ResourceTypeFilters\":[\"AWS::S3::Bucket\"],\"StackIdentifier\":\"arn:aws:cloudformation:us-west-2:123456789012:stack\/MyCloudFormationStackName\/fb0d5000-aba8-00e8-aa9e-50d5cEXAMPLE\"
 ```
 
 The complete `ResourceQuery` string is then represented as shown here, as a CLI command parameter:
 
 ```
---resource-query '{"Type":"CLOUDFORMATION__STACK_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::S3::Bucket"\"],\"StackIdentifier\":\"arn:aws:cloudformation:us-west-2:123456789012:stack\/MyCloudFormationStackName\/fb0d5000-aba8-00e8-aa9e-50d5cEXAMPLE\"}'
+--resource-query '{"Type":"CLOUDFORMATION_STACK_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::S3::Bucket\"],\"StackIdentifier\":\"arn:aws:cloudformation:us-west-2:123456789012:stack\/MyCloudFormationStackName\/fb0d5000-aba8-00e8-aa9e-50d5cEXAMPLE\"}'
 ```
 
 ## Build a tag\-based query and create a group<a name="gettingstarted-query-tag-based"></a>

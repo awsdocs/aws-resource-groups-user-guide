@@ -17,6 +17,8 @@ The following tables list which resource types are supported for tagging in Tag 
 **Note**  
 Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
+For a list of resource types that are deprecated and no longer supported by Resource Groups, see the section [Deprecated resource types](#deprecated-types) at the end of this topic\.
+
 ## Amazon API Gateway<a name="services-apigateway"></a>
 
 
@@ -407,13 +409,17 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| `AWS::IAM::InstanceProfile` |  ✓ Yes |  ✓ Yes |  ☓ No | 
-| `AWS::IAM::ManagedPolicy` |  ✓ Yes |  ✓ Yes |  ☓ No | 
-| `AWS::IAM::OpenIDConnectProvider` |  ✓ Yes |  ✓ Yes |  ☓ No | 
-| `AWS::IAM::Role` |  ☓ No |  ☓ No |  ✓ Yes | 
-| `AWS::IAM::SAMLProvider` |  ✓ Yes |  ✓ Yes |  ☓ No | 
-| `AWS::IAM::ServerCertificate` |  ✓ Yes |  ✓ Yes |  ☓ No | 
-| `AWS::IAM::VirtualMFADevice` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::IAM::InstanceProfile` |  ✓ Yes¹ |  ✓ Yes² |  ☓ No | 
+| `AWS::IAM::ManagedPolicy` |  ✓ Yes¹ |  ✓ Yes² |  ☓ No | 
+| `AWS::IAM::OpenIDConnectProvider` |  ✓ Yes¹ |  ✓ Yes² |  ☓ No | 
+| `AWS::IAM::Role` |  ☓ No |  ☓ No |  ✓ Yes² | 
+| `AWS::IAM::SAMLProvider` |  ✓ Yes¹ |  ✓ Yes² |  ☓ No | 
+| `AWS::IAM::ServerCertificate` |  ✓ Yes¹ |  ✓ Yes² |  ☓ No | 
+| `AWS::IAM::VirtualMFADevice` |  ☓ No |  ✓ Yes² |  ☓ No | 
+
+¹ This is a resource for a global service that is hosted in the **US East \(N\. Virginia\)** Region\. To use Tag Editor to create or modify tags for this resource type, you must include `us-east-1` from the **Select regions** list under **Find resources to tag** in the Tag Editor console\.
+
+² This is a resource for a global service that is hosted in the **US East \(N\. Virginia\)** Region\. Because Resource Groups are maintained separately for each region, you must switch your AWS Management Console to the AWS Region that contains the resources you want to include in the group\. To create a resource group that contains a global resource, you must configure your AWS Management Console to **US East \(N\. Virginia\) us\-east\-1** using the Region selector in the upper\-right corner of the AWS Management Console\.
 
 ## Amazon Inspector<a name="services-inspector"></a>
 
@@ -619,9 +625,9 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| `AWS::RoboMaker::DeploymentJob` |  ✓ Yes |  ✓ Yes |  ☓ No | 
-| `AWS::RoboMaker::Fleet` |  ✓ Yes |  ✓ Yes |  ☓ No | 
-| `AWS::RoboMaker::Robot` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::RoboMaker::DeploymentJob` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::RoboMaker::Fleet` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::RoboMaker::Robot` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::RoboMaker::RobotApplication` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | `AWS::RoboMaker::SimulationApplication` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | `AWS::RoboMaker::SimulationJob` |  ✓ Yes |  ✓ Yes |  ☓ No | 
@@ -760,3 +766,14 @@ Adding tags to a AWS CloudFormation stack causes an update of the stack\.
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
 | `AWS::WorkSpaces::Workspace` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+
+## Deprecated resource types<a name="deprecated-types"></a>
+
+The following resource types are no longer supported for the specified functionality\.
+
+
+| **Service** | **Resource type** | **Support change** | **Date** | 
+| --- | --- | --- | --- | 
+|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2002  | 
+|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2002  | 
+|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2002  | 

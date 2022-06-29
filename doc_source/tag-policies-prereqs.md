@@ -76,36 +76,49 @@ For more information on IAM policies and permissions, see the [IAM User Guide](h
 
 ## Amazon S3 bucket policy for storing report<a name="bucket-policy"></a>
 
-To create an organization\-wide compliance report, you must grant access for the tag policies service principal to an Amazon S3 bucket in the US East \(N\. Virginia\) Region for report storage\. Attach the following bucket policy to the bucket, replacing the placeholders with your actual S3 bucket name, and the ID number of the organization in which you're applying the policy\.
+To create an organization\-wide compliance report, you must grant access for the tag policies service principal to an Amazon S3 bucket in the US East \(N\. Virginia\) Region for report storage\. Attach the following bucket policy to the bucket, replacing the placeholders with your actual S3 bucket name, the ID number of the organization, and the account ID number of the organization's management account for the organization in which you're applying the policy\.
 
 ```
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "TagPolicyACL",
-            "Effect": "Allow",
-            "Principal": {
-                "Service": [
-                    "tagpolicies.tag.amazonaws.com"
-                ]
-            },
-            "Action": "s3:GetBucketAcl",
-            "Resource": "arn:aws:s3:::your-bucket-name"
-        },
-        {
-            "Sid": "TagPolicyBucketDelivery",
-            "Effect": "Allow",
-            "Principal": {
-                "Service": [
-                    "tagpolicies.tag.amazonaws.com"
-                ]
-            },
-            "Action": [
-                "s3:PutObject"
-            ],
-            "Resource": "arn:aws:s3:::your-bucket-name/AwsTagPolicies/your-org-id/*"
-        }
-    ]
+    "Version": "2012-10-17", 
+    "Statement": [ 
+        { 
+            "Sid": "TagPolicyACL", 
+            "Effect": "Allow", 
+            "Principal": { 
+                "Service": [ 
+                    "tagpolicies.tag.amazonaws.com" 
+                 ]
+            }, 
+            "Action": "s3:GetBucketAcl", 
+            "Resource": "arn:aws:s3:::<your-bucket-name>",
+            "Condition": {
+                "StringEquals": {
+                    "aws:SourceAccount": "<organization-management-account-id>",
+                    "aws:SourceArn": "arn:aws:tag:us-east-1:<organization-management-account-id>:*"
+                }
+            } 
+         }, 
+         { 
+            "Sid": "TagPolicyBucketDelivery", 
+            "Effect": "Allow", 
+            "Principal": { 
+                "Service": [ 
+                    "tagpolicies.tag.amazonaws.com" 
+                 ]
+            }, 
+            "Action": [ 
+                "s3:PutObject", 
+                "s3:PutObjectAcl"
+            ], 
+            "Resource": "arn:aws:s3:::<your-bucket-name>/AwsTagPolicies/<your-organization-id>/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:SourceAccount": "<organization-management-account-id>",
+                    "aws:SourceArn": "arn:aws:tag:us-east-1:<organization-management-account-id>:*"
+                }
+            }
+         } 
+    ] 
 }
 ```

@@ -2,6 +2,7 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Resource groups can now include resources of Amazon Keyspaces \(for Apache Cassandra\)](#doc-history) | AWS Resource Groups now supports including resources for Amazon Keyspaces \(for Apache Cassandra\) in a resource group\. | October 20, 2022 | 
 | [Deprecation of resource types](https://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html#services-robomaker) | The following resource types are no longer supported by Tag Editor: `AWS::RoboMaker::Robot`, `AWS::RoboMaker::Fleet`, and `AWS::RoboMaker::DeploymentJob`\. | May 17, 2022 | 
 | [Resource groups can now be used by Amazon VPC Network Access Analyzer to monitor unwanted network traffic to your AWS resources\.](https://docs.aws.amazon.com/ARG/latest/userguide/integrated-services-list.html) | You can use AWS Resource Groups to specify the sources and destinations for your network access requirements\. | December 3, 2021 | 
 | [Added support for resources of AWS Resilience Hub](#doc-history) | AWS Resource Groups now supports including resources for AWS Resilience Hub in a resource group\. | November 18, 2021 | 

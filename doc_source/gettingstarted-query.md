@@ -193,7 +193,7 @@ The following procedures show you how to build a stack\-based query and use it t
 
 1. Choose the stack that you want to be the basis of your group\. A resource group can be based on only one stack\. To filter the list of stacks, start typing the name of the stack\. Only stacks with supported statuses appear in the list\.
 
-1. Choose resource types in the stack that you want to include in the group\. For this walkthrough, keep the default, **All supported resource types**\. For more information about which resource types are supported and can be in the group, see [Resources you can use with AWS Resource Groups and Tag Editor](supported-resources.md)\.
+1. Choose resource types in the stack that you want to include in the group\. For this walkthrough, keep the default, **All supported resource types**\. For more information about which resource types are supported and can be in the group, see [Resource types you can use with AWS Resource Groups and Tag Editor](supported-resources.md)\.
 
 1. Choose **View group resources** to return the list of resources in the AWS CloudFormation stack that match your selected resource types\.
 

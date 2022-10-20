@@ -30,12 +30,15 @@ In AWS, a *resource* is an entity that you can work with\. Examples include an A
 A *resource group* is a collection of AWS resources that are all in the same AWS Region, and that match the criteria specified in the group's query\. In Resource Groups, there are two types of queries you can use to build a group\. Both query types include resources that are specified in the format `AWS::service::resource`\.
 + **Tag\-based**
 
-  Tag\-based queries include lists of resources and tags\. *Tags* are keys that help identify and sort your resources within your organization\. Optionally, tags include values for keys\.
+  A tag\-based resource groups bases its membership on a query that specifies a list of resources and tags\. *Tags* are keys that help identify and sort your resources within your organization\. Optionally, tags include values for keys\.
 **Important**  
 Do not store personally identifiable information \(PII\) or other confidential or sensitive information in tags\. We use tags to provide you with billing and administration services\. Tags are not intended to be used for private or sensitive data\.
 + **AWS CloudFormation stack\-based**
 
-  In an AWS CloudFormation stack\-based query, you choose an AWS CloudFormation stack in your account in the current region, and then choose resource types within the stack that you want to be in the group\. You can base your query on only one AWS CloudFormation stack\.
+  An AWS CloudFormation stack\-based resource group bases its membership on a query that specifies an AWS CloudFormation stack in your account in the current region\. You can optionally choose resource types within the stack that you want to be in the group\. You can base your query on only one AWS CloudFormation stack\.
++ **Service\-linked resource groups**
+
+  Some AWS services define resource groups that you can create and manage only by using that service's console and APIs\. You are limited in what you can do with these groups in the Resource Groups console\. For more information, see 
 
 Resource groups can be *nested*; a resource group can contain existing resource groups in the same region\.
 

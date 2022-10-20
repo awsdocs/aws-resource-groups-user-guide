@@ -97,7 +97,7 @@ You can update only resource groups that you own\. The **Owner** column shows ac
 
 1. On the **Edit group** page, under **Grouping criteria**, to change the stack on which your group is based, choose the stack from the drop\-down list\. A resource group can be based on only one stack\. To filter the list of stacks, start typing the name of the stack\. Only stacks with supported statuses appear in the list\. For a list of supported statuses, see [Creating query\-based groups in AWS Resource Groups](gettingstarted-query.md) in this guide\.
 
-1. Add or remove resource types\. Only resource types that are available in the stack are shown in the drop\-down list\. The default is **All supported resource types**\. You can have a maximum of 20 resource types in a query\. To remove a resource type, choose **X** on the resource type's label\. For more information about which resource types are supported and can be in the group, see [Resources you can use with AWS Resource Groups and Tag Editor](supported-resources.md)\.
+1. Add or remove resource types\. Only resource types that are available in the stack are shown in the drop\-down list\. The default is **All supported resource types**\. You can have a maximum of 20 resource types in a query\. To remove a resource type, choose **X** on the resource type's label\. For more information about which resource types are supported and can be in the group, see [Resource types you can use with AWS Resource Groups and Tag Editor](supported-resources.md)\.
 
 1. Choose **Preview group resources** to retrieve the list of resources in the AWS CloudFormation stack that match your selected resource types\.
 

@@ -1,6 +1,6 @@
-# Resources you can use with AWS Resource Groups and Tag Editor<a name="supported-resources"></a>
+# Resource types you can use with AWS Resource Groups and Tag Editor<a name="supported-resources"></a>
 
-You can use the AWS Management Console or the AWS CLI to create resource groups and then interact with the member resources through those groups\. You can add tags to many AWS resources and then use those tags to manage group membership\. This topic describes the AWS resources that you can include in resource groups by using AWS Resource Groups, and the AWS resources that you can tag by using Tag Editor\.
+You can use the AWS Management Console or the AWS CLI to create resource groups and then interact with the member resources through those groups\. You can add tags to many AWS resources and then use those tags to manage group membership\. This topic describes the AWS resource types that you can include in resource groups by using AWS Resource Groups, and the resource types that you can tag by using Tag Editor\.
 
 **Important**  
 A resource group based on a query for **All supported resource types** can add members automatically over time, as new resources are supported by Resource Groups\. When you run automations or other bulk tasks on an existing resource group based on **All supported resource types**, be aware that the actions might run on many more resources than were in the group when you first created the group\. This might also mean that automations or tasks that you created for other resources are applied to possibly unintended resources, or resources on which the tasks cannot be successfully completed\. in those cases, you can add a resource type filter to specify that only resources of the specified types can be part of the group\.  
@@ -47,6 +47,16 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | --- | --- | --- | --- | 
 | `AWS::AppSync::DataSource` |  ☓ No |  ☓ No |  ✓ Yes | 
 | `AWS::AppSync::GraphQLApi` |  ☓ No |  ☓ No |  ✓ Yes | 
+
+## AWS Billing Conductor<a name="services-billingconductor"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::BillingConductor::BillingGroup` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::BillingConductor::CustomLineItem` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::BillingConductor::PricingPlan` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::BillingConductor::PricingRule` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 
 ## Amazon Braket<a name="services-braket"></a>
 
@@ -404,6 +414,16 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | `AWS::DataBrew::Recipe` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::DataBrew::Schedule` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 
+## Amazon GuardDuty<a name="services-guardduty"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::GuardDuty::Detector` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::GuardDuty::Filter` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::GuardDuty::IPSet` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::GuardDuty::ThreatIntelSet` |  ☓ No |  ✓ Yes |  ☓ No | 
+
 ## AWS Identity and Access Management<a name="services-iam"></a>
 
 
@@ -474,6 +494,14 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | --- | --- | --- | --- | 
 | `AWS::KMS::Alias` |  ☓ No |  ☓ No |  ✓ Yes | 
 | `AWS::KMS::Key` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+
+## Amazon Keyspaces \(for Apache Cassandra\)<a name="services-cassandra"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::Cassandra::Keyspace` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::Cassandra::Table` |  ☓ No |  ✓ Yes |  ☓ No | 
 
 ## Amazon Kinesis<a name="services-kinesis"></a>
 
@@ -569,6 +597,13 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | `AWS::Pinpoint::PushTemplate` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 | `AWS::Pinpoint::SmsTemplate` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 | `AWS::Pinpoint::VoiceTemplate` |  ☓ No |  ✓ Yes |  ☓ No | 
+
+## Amazon Pinpoint SMS and Voice API<a name="services-pinpointsmsvoicev2"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::PinpointSMSVoiceV2::Pool` |  ☓ No |  ✓ Yes |  ☓ No | 
 
 ## Amazon Quantum Ledger Database \(Amazon QLDB\)<a name="services-qldb"></a>
 
@@ -674,8 +709,10 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | `AWS::SageMaker::HyperParameterTuningJob` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SageMaker::LabelingJob` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SageMaker::Model` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::SageMaker::ModelPackageGroup` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 | `AWS::SageMaker::NotebookInstance` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::SageMaker::Pipeline` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::SageMaker::Project` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 | `AWS::SageMaker::TrainingJob` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SageMaker::TransformJob` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SageMaker::Workteam` |  ☓ No |  ✓ Yes |  ☓ No | 
@@ -774,6 +811,6 @@ The following resource types are no longer supported for the specified functiona
 
 | **Service** | **Resource type** | **Support change** | **Date** | 
 | --- | --- | --- | --- | 
-|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2002  | 
-|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2002  | 
-|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2002  | 
+|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2022  | 
+|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2022  | 
+|  AWS RoboMaker  |  [https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022)  |  No longer supported by Tag Editor\.  |  May 2, 2022  | 

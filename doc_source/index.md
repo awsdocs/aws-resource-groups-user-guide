@@ -4,13 +4,13 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
@@ -31,7 +31,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Prerequisites and permissions](tag-policies-prereqs.md)
       + [Evaluating compliance for an account](tag-policies-orgs-finding-noncompliant-tags.md)
       + [Evaluating organization-wide compliance](tag-policies-orgs-evaluating-org-wide-compliance.md)
-+ [Resources you can use with AWS Resource Groups and Tag Editor](supported-resources.md)
++ [Resource types you can use with AWS Resource Groups and Tag Editor](supported-resources.md)
 + [Security in AWS Resource Groups](security.md)
    + [Data Protection in AWS Resource Groups](security_data-protection.md)
    + [Identity and Access Management for AWS Resource Groups](security-iam.md)

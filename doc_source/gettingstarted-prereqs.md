@@ -14,7 +14,7 @@ If you do not have an AWS account, complete the following steps to create one\.
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-   When you sign up for an AWS account, an *AWS account root user* is created\. The root user has access to all AWS services and resources in the account\. As a security best practice, [assign administrative access to an administrative user](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html), and use only the root user to perform [tasks that require root user access](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html#aws_tasks-that-require-root)\.
+   When you sign up for an AWS account, an *AWS account root user* is created\. The root user has access to all AWS services and resources in the account\. As a security best practice, [assign administrative access to an administrative user](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html), and use only the root user to perform [tasks that require root user access](https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html)\.
 
 ## Create resources<a name="gettingstarted-prereqs-create"></a>
 
@@ -27,7 +27,7 @@ To make full use of Resource Groups and Tag Editor, you might need additional pe
 + Permissions that are required to use the Tag Editor console
 + Permissions that are required to use the AWS Resource Groups console and API\. 
 
-If you are an administrator, you can provide permissions for your users by creating policies through the AWS Identity and Access Management \(IAM\) service\. You first create IAM users or groups, and then apply the policies with the permissions that they need\. For information about creating and attaching IAM policies, see [Working with policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html)\.
+If you are an administrator, you can provide permissions for your users by creating policies through the AWS Identity and Access Management \(IAM\) service\. You first create your principals, such as IAM roles or users, or associate external identities with your AWS environment using a service like AWS IAM Identity Center \(successor to AWS Single Sign\-On\)\. Then you apply policies with the permissions that your users need\. For information about creating and attaching IAM policies, see [Working with policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html)\.
 
 ### Permissions for individual services<a name="rg-perms-individual-services"></a>
 
@@ -47,10 +47,10 @@ To use Resource Groups and Tag Editor, the following permissions must be added t
 AWS Resource Groups and Tag Editor support the following AWS managed policies that you can use to provide a predefined set of permissions to your users\. You can attach these managed policies to any user, role or group just as you would any other policy that you create\.
 
 **[ResourceGroupsandTagEditorReadOnlyAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess)**  
-This policy grants the attached IAM user or role permission to call the read\-only operations for both Resource Groups and Tag Editor\. To read a resource's tags, you must also have permissions for that resource through a separate policy \(see the following Important note\)\.
+This policy grants the attached IAM role or user permission to call the read\-only operations for both Resource Groups and Tag Editor\. To read a resource's tags, you must also have permissions for that resource through a separate policy \(see the following Important note\)\.
 
 **[ResourceGroupsandTagEditorFullAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess)**  
-This policy grants the attached IAM user or role permission to call any Resource Groups operation and the read and write tag operations in Tag Editor\. To read or write a resource's tags, you must also have permissions for that resource through a separate policy \(see the following Important note\)\.
+This policy grants the attached IAM role or user permission to call any Resource Groups operation and the read and write tag operations in Tag Editor\. To read or write a resource's tags, you must also have permissions for that resource through a separate policy \(see the following Important note\)\.
 
 **Important**  
 The two previous policies grant permission to call the Resource Groups and Tag Editor operations and use those consoles\. For Resource Groups operations, those policies are sufficient and grant all the permissions needed to work with any resource in the Resource Groups console\.   
@@ -156,7 +156,7 @@ This example policy statement grants permissions only for AWS Resource Groups an
 Resource Groups supports the following\.
 + **Action\-based policies\.** For example, you can create a policy that allows users to perform [https://docs.aws.amazon.com/ARG/latest/APIReference/API_ListGroups.html](https://docs.aws.amazon.com/ARG/latest/APIReference/API_ListGroups.html) operations, but no others\.
 + **Resource\-level permissions\.** Resource Groups supports using [ARNs](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) to specify individual resources in the policy\.
-+ **Authorization based on tags\.** Resource Groups supports using [resource tags](tag-editor.md) in the condition of a policy\. For example, you can create a policy that allows Resource Groups users full access to a group that you have tagged\.
++ **Authorization based on tags\.** Resource Groups supports using resource tags in the condition of a policy\. For example, you can create a policy that allows Resource Groups users full access to a group that you have tagged\.
 + **Temporary credentials\.** Users can assume a role with a policy that allows AWS Resource Groups operations\.
 
 Resource Groups doesn't support resource\-based policies\.

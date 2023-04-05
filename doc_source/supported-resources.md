@@ -63,6 +63,7 @@ For a list of resource types that are deprecated and no longer supported by Reso
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
+| `AWS::Braket::Job` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::Braket::QuantumTask` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
 ## AWS Certificate Manager<a name="services-certificatemanager"></a>
@@ -126,6 +127,13 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
 | `AWS::Logs::LogGroup` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+
+## Amazon CloudWatch Synthetics<a name="services-synthetics"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::Synthetics::Canary` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 
 ## AWS CodeArtifact<a name="services-codeartifact"></a>
 
@@ -196,6 +204,17 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | --- | --- | --- | --- | 
 | `AWS::Config::ConfigRule` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
+## Amazon Connect Wisdom<a name="services-wisdom"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::Wisdom::Assistant` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::Wisdom::AssistantAssociation` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::Wisdom::Content` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::Wisdom::KnowledgeBase` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::Wisdom::Session` |  ☓ No |  ✓ Yes |  ☓ No | 
+
 ## AWS Data Exchange<a name="services-dataexchange"></a>
 
 
@@ -216,12 +235,12 @@ For a list of resource types that are deprecated and no longer supported by Reso
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
-| `AWS::DMS::Certificate` |  ☓ No |  ✓ Yes |  ☓ No | 
-| `AWS::DMS::Endpoint` |  ☓ No |  ✓ Yes |  ✓ Yes | 
-| `AWS::DMS::EventSubscription` |  ☓ No |  ✓ Yes |  ☓ No | 
-| `AWS::DMS::ReplicationInstance` |  ☓ No |  ✓ Yes |  ✓ Yes | 
-| `AWS::DMS::ReplicationSubnetGroup` |  ☓ No |  ✓ Yes |  ☓ No | 
-| `AWS::DMS::ReplicationTask` |  ☓ No |  ✓ Yes |  ☓ No | 
+| `AWS::DMS::Certificate` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::DMS::Endpoint` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+| `AWS::DMS::EventSubscription` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::DMS::ReplicationInstance` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+| `AWS::DMS::ReplicationSubnetGroup` |  ✓ Yes |  ✓ Yes |  ☓ No | 
+| `AWS::DMS::ReplicationTask` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 
 ## Amazon DynamoDB<a name="services-dynamodb"></a>
 
@@ -244,6 +263,14 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | --- | --- | --- | --- | 
 | `AWS::EMRContainers::JobRun` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::EMRContainers::VirtualCluster` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+
+## Amazon EMR Serverless<a name="services-emrserverless"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::EMRServerless::Application` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::EMRServerless::JobRun` |  ☓ No |  ✓ Yes |  ☓ No | 
 
 ## Amazon ElastiCache<a name="services-elasticache"></a>
 
@@ -276,10 +303,12 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | `AWS::EC2::Image` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | `AWS::EC2::Instance` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::InternetGateway` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+| `AWS::EC2::KeyPair` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::EC2::LaunchTemplate` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::NatGateway` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::NetworkAcl` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::NetworkInterface` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
+| `AWS::EC2::PlacementGroup` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::ReservedInstance` |  ✓ Yes |  ✓ Yes |  ☓ No | 
 | `AWS::EC2::RouteTable` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::EC2::SecurityGroup` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
@@ -473,6 +502,18 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | `AWS::IoTEvents::DetectorModel` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::IoTEvents::Input` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 
+## AWS IoT FleetWise<a name="services-iotfleetwise"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::IoTFleetWise::Campaign` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::IoTFleetWise::DecoderManifest` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::IoTFleetWise::Fleet` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::IoTFleetWise::ModelManifest` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::IoTFleetWise::SignalCatalog` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+| `AWS::IoTFleetWise::Vehicle` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+
 ## AWS IoT Greengrass<a name="services-greengrass"></a>
 
 
@@ -629,6 +670,7 @@ For a list of resource types that are deprecated and no longer supported by Reso
 
 | **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
 | --- | --- | --- | --- | 
+| `AWS::RDS::CustomDBEngineVersion` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::RDS::DBCluster` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::RDS::DBClusterParameterGroup` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::RDS::DBClusterSnapshot` |  ✓ Yes |  ✓ Yes |  ☓ No | 
@@ -796,6 +838,13 @@ For a list of resource types that are deprecated and no longer supported by Reso
 | `AWS::SSM::ManagedInstance` |  ☓ No |  ✓ Yes |  ☓ No | 
 | `AWS::SSM::Parameter` |  ✓ Yes |  ✓ Yes |  ✓ Yes | 
 | `AWS::SSM::PatchBaseline` |  ☓ No |  ✓ Yes |  ✓ Yes | 
+
+## Amazon Timestream<a name="services-timestream"></a>
+
+
+| **Resources** | **Tag Editor Tagging** | **Tag\-based Groups** | **AWS CloudFormation Stack\-based Groups** | 
+| --- | --- | --- | --- | 
+| `AWS::Timestream::ScheduledQuery` |  ☓ No |  ✓ Yes |  ✓ Yes | 
 
 ## Amazon WorkSpaces<a name="services-workspaces"></a>
 

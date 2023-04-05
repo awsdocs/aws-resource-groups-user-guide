@@ -26,12 +26,12 @@ The syntax of the `ResourceQuery` parameter of a tag\-based resource group conta
   +  `ResourceTypeFilters` 
 
     This element limits the results to only those resource types that match the filter\. You can specify the following values:
-    + `"AWS::AllSupported"` – to specify that the results can include resources of any type that match the query and that are currently supported by the &ARG; service\.
+    + `"AWS::AllSupported"` – to specify that the results can include resources of any type that match the query and that are currently supported by the Resource Groups service\.
     + `"AWS::service-id::resource-type` – a comma separated list of resource\-type specification strings with this format: , such as `"AWS::EC2::Instance"`\.
   +  `TagFilters` 
 
     This element specifies key/value string pairs that are compared to the tags attached to your resources\. Those with a tag key and value that match the filter are included in the group\. Each filter consists of these elements:
-    + `"Key"` – a string with a key name\. Only resources that have tags with a a matching key name match and can be included in the group\.
+    + `"Key"` – a string with a key name\. Only resources that have tags with a matching key name match the filter and are members of the group\.
     + `"Values"` – a string with a comma separated list of values for the specified key\. Only resources with a matching tag key and a value that matches one in this list are members of the group\.
 All of these JSON elements must be combined into a single\-line string representation of the JSON structure\. For example, consider a `Query` with the following example JSON structure\. This query is meant to match only Amazon EC2 instances that have a tag "Stage" with a value "Test"\.  
 
@@ -57,8 +57,15 @@ The complete `ResourceQuery` string is then represented as shown here, as a CLI 
 --resource-query '{"Type":"TAG_FILTERS_1_0","Query":"{\"ResourceTypeFilters\":[\"AWS::AllSupported\"],\"TagFilters\":[{\"Key\":\"Stage\",\"Values\":[\"Test\"]}]}"}'
 ```
 
- **AWS CloudFormation stack\-based**   
-In an AWS CloudFormation stack\-based query, you choose an AWS CloudFormation stack in your account in the current region, and then choose resource types in the stack that you want to be in the group\. You can base your query on only one AWS CloudFormation stack\. Resource Groups supports queries based on AWS CloudFormation stacks that have one of the following statuses\.  
+  **AWS CloudFormation stack\-based**   
+In an AWS CloudFormation stack\-based query, you choose an AWS CloudFormation stack in your account in the current region, and then choose resource types in the stack that you want to be in the group\. You can base your query on only one AWS CloudFormation stack\.   
+An AWS CloudFormation stack can contain other AWS CloudFormation "child" stacks\. However, a resource group based on a "parent" stack doesn't get all of the child stacks' resources as group members\. Resource groups adds the child stacks to the parent stack's resource group as single group members and doesn't expand them\.
+Resource Groups supports queries based on AWS CloudFormation stacks that have one of the following statuses\.  
++ `CREATE_COMPLETE`
++ `CREATE_IN_PROGRESS`
++ `DELETE_FAILED`
++ `DELETE_IN_PROGRESS`
++ `REVIEW_IN_PROGRESS`
 Only resources that are directly created as part of the stack in the query are included in the resource group\. Resources created later by members of the AWS CloudFormation stack do not become members of the group\. For example, if an auto\-scaling group is created by AWS CloudFormation as part of the stack, then that auto\-scaling group ***is*** a member of the group\. However, an Amazon EC2 instance created by that auto\-scaling group as part of its operation ***is not*** a member of the AWS CloudFormation stack\-based resource group\. 
 If you create a group based on an AWS CloudFormation stack, and the stack's status changes to one that is no longer supported as a basis for a group query, such as `DELETE_COMPLETE`, the resource group still exists, but it has no member resources\.
 

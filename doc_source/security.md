@@ -9,10 +9,10 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using Resource Groups\. The following topics show you how to configure Resource Groups to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your Resource Groups resources\. 
 
 **Topics**
-+ [Data Protection in AWS Resource Groups](security_data-protection.md)
-+ [Identity and Access Management for AWS Resource Groups](security-iam.md)
-+ [Logging and Monitoring in Resource Groups](security_logging-monitoring.md)
-+ [Compliance Validation for Resource Groups](security_compliance.md)
++ [Data protection in AWS Resource Groups](security_data-protection.md)
++ [Identity and access management for AWS Resource Groups](security-iam.md)
++ [Logging and monitoring in Resource Groups](security_logging-monitoring.md)
++ [Compliance validation for Resource Groups](security_compliance.md)
 + [Resilience in Resource Groups](security_resilience.md)
-+ [Infrastructure Security in Resource Groups](security_infrastructure.md)
-+ [Security Best Practices for Resource Groups](security_best-practices.md)
++ [Infrastructure security in Resource Groups](security_infrastructure.md)
++ [Security best practices for Resource Groups](security_best-practices.md)

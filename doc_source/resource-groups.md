@@ -6,7 +6,6 @@ You can access Resource Groups through any of the following entry points\.
 + In the [AWS Management Console](https://console.aws.amazon.com/console/home), in the top navigation bar, choose **Services**\. Then, under **Management & Governance**, choose **Resource Groups & Tag Editor**\.
 
   Direct link: [AWS Resource Groups console](https://console.aws.amazon.com/resource-groups)
-+ In the AWS Systems Manager console, from the left navigation pane entry for Resource Groups\.
 + By using the Resource Groups API, in AWS CLI commands or AWS SDK programming languages\.
 
 **To work with resource groups on the AWS Management Console home**
@@ -36,9 +35,10 @@ Do not store personally identifiable information \(PII\) or other confidential o
 + **AWS CloudFormation stack\-based**
 
   An AWS CloudFormation stack\-based resource group bases its membership on a query that specifies an AWS CloudFormation stack in your account in the current region\. You can optionally choose resource types within the stack that you want to be in the group\. You can base your query on only one AWS CloudFormation stack\.
-+ **Service\-linked resource groups**
 
-  Some AWS services define resource groups that you can create and manage only by using that service's console and APIs\. You are limited in what you can do with these groups in the Resource Groups console\. For more information, see 
+**Service\-linked resource groups**
+
+Some AWS services define resource groups that you can create and manage only by using that service's console and APIs\. You are limited in what you can do with these groups in the Resource Groups console\. For more information, see [Service configurations for resource groups](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html) in the *AWS Resource Groups API Reference Guide*\.
 
 Resource groups can be *nested*; a resource group can contain existing resource groups in the same region\.
 
@@ -56,7 +56,7 @@ With Resource Groups, you use a single page to view and manage your resources\. 
 
 ## AWS Resource Groups and permissions<a name="how-resourcegroups-works"></a>
 
-Resource Groups feature permissions are at the account level\. As long as users who are sharing your account have the correct IAM permissions, they can work with resource groups that you create\. For information about creating IAM users, see [Creating an IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_SettingUpUser.html) in the *IAM User Guide*\.
+Resource Groups feature permissions are at the account level\. As long as IAM principals, such as roles and users, who are sharing your account have the correct IAM permissions, they can work with resource groups that you create\. 
 
 Tags are properties of a resource, so they are shared across your entire account\. Users in a department or specialized group can draw from a common vocabulary \(tags\) to create resource groups that are meaningful to their roles and responsibilities\. Having a common pool of tags also means that when users share a resource group, they don't have to worry about missing or conflicting tag information\.
 
@@ -76,4 +76,4 @@ Tags are key and value pairs that act as metadata for organizing your AWS resour
 **Important**  
 Do not store personally identifiable information \(PII\) or other confidential or sensitive information in tags\. We use tags to provide you with billing and administration services\. Tags are not intended to be used for private or sensitive data\.
 
-For more information about tagging, see [Tag Editor](tag-editor.md) in this guide\. You can tag [supported resources](supported-resources.md) by using Tag Editor, and some additional resources by using tagging functionality in the service console in which you create and manage the resource\.
+For more information about tagging, see the [Tag Editor User Guide](https://docs.aws.amazon.com/tag-editor/latest/userguide)\. You can tag [supported resources](supported-resources.md) by using Tag Editor, and some additional resources by using tagging functionality in the service console in which you create and manage the resource\.

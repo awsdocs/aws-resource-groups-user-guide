@@ -1,14 +1,14 @@
-# How Resource Groups Works with IAM<a name="security_iam_service-with-iam"></a>
+# How Resource Groups works with IAM<a name="security_iam_service-with-iam"></a>
 
 Before you use IAM to manage access to Resource Groups, you should understand what IAM features are available to use with Resource Groups\. To get a high\-level view of how Resource Groups and other AWS services work with IAM, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
 
 **Topics**
-+ [Resource Groups Identity\-Based Policies](#security_iam_service-with-iam-id-based-policies-arg-te)
-+ [Resource\-Based Policies](#security_iam_resource-based-policies)
-+ [Authorization Based on Resource Groups Tags](#security_iam_tags)
-+ [Resource Groups IAM Roles](#security_iam_roles)
++ [Resource Groups identity\-based policies](#security_iam_service-with-iam-id-based-policies-arg-te)
++ [Resource\-based policies](#security_iam_resource-based-policies)
++ [Authorization based on Resource Groups tags](#security_iam_tags)
++ [Resource Groups IAM roles](#security_iam_roles)
 
-## Resource Groups Identity\-Based Policies<a name="security_iam_service-with-iam-id-based-policies-arg-te"></a>
+## Resource Groups identity\-based policies<a name="security_iam_service-with-iam-id-based-policies-arg-te"></a>
 
 With IAM identity\-based policies, you can specify allowed or denied actions and resources as well as the conditions under which actions are allowed or denied\. Resource Groups supports specific actions, resources, and condition keys\. To learn about all of the elements that you use in a JSON policy, see [IAM JSON Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.
 
@@ -66,13 +66,13 @@ For more information about the format of ARNs, see [Amazon Resource Names \(ARNs
 For example, to specify the `my-test-group` resource group in your statement, use the following ARN:
 
 ```
-"Resource": "arn:aws:resource-groups:us-west-2:123456789012:group/my-test-group"
+"Resource": "arn:aws:resource-groups:us-east-1:123456789012:group/my-test-group"
 ```
 
 To specify all groups that belong to a specific account, use the wildcard \(\*\):
 
 ```
-"Resource": "arn:aws:resource-groups:us-west-2:123456789012:group/*"
+"Resource": "arn:aws:resource-groups:us-east-1:123456789012:group/*"
 ```
 
 Some Resource Groups actions, such as those for creating resources, cannot be performed on a specific resource\. In those cases, you must use the wildcard \(\*\)\.
@@ -81,17 +81,18 @@ Some Resource Groups actions, such as those for creating resources, cannot be pe
 "Resource": "*"
 ```
 
-Some Resource Groups API actions can involve multiple resources\. For example, `DeleteGroup` deletes groups, so an IAM user must have permissions to delete a specific group or all groups\. To specify multiple resources in a single statement, separate the ARNs with commas\.
+Some Resource Groups API actions can involve multiple resources\. For example, `DeleteGroup` deletes groups, so a calling principal must have permissions to delete a specific group or all groups\. To specify multiple resources in a single statement, separate the ARNs with commas\.
 
 ```
 "Resource": [
-      "resource1",
-      "resource2"
+  "resource1",
+  "resource2"
+]
 ```
 
 To see a list of Resource Groups resource types and their ARNs, and learn with which actions you can specify the ARN of each resource, see [Actions, Resources, and Condition Keys for AWS Resource Groups](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awsresourcegroups.html) in the *IAM User Guide*\.
 
-### Condition Keys<a name="security_iam_id-based-policies-conditionkeys"></a>
+### Condition keys<a name="security_iam_id-based-policies-conditionkeys"></a>
 
 Administrators can use AWS JSON policies to specify who has access to what\. That is, which **principal** can perform **actions** on what **resources**, and under what **conditions**\.
 
@@ -109,33 +110,33 @@ To see a list of Resource Groups condition keys, and learn with which actions an
 
 ### Examples<a name="security_iam-id-based-policies-examples"></a>
 
-To view examples of Resource Groups identity\-based policies, see [AWS Resource Groups Identity\-Based Policy Examples](security_iam_id-based-policy-examples.md)\.
+To view examples of Resource Groups identity\-based policies, see [AWS Resource Groups identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
 
-## Resource\-Based Policies<a name="security_iam_resource-based-policies"></a>
+## Resource\-based policies<a name="security_iam_resource-based-policies"></a>
 
 Resource Groups does not support resource\-based policies\.
 
-## Authorization Based on Resource Groups Tags<a name="security_iam_tags"></a>
+## Authorization based on Resource Groups tags<a name="security_iam_tags"></a>
 
 You can attach tags to groups in Resource Groups, or pass tags in a request to Resource Groups\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `aws:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. You can apply tags to a group when you are creating or updating the group\. For more information about tagging a group in Resource Groups, see [Creating query\-based groups in AWS Resource Groups](gettingstarted-query.md) and [Updating groups in AWS Resource Groups](updating-resource-groups.md) in this guide\.
 
-To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Viewing Groups Based on Tags](security_iam_id-based-policy-examples.md#security_iam_policy-examples-view-tags)\.
+To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Viewing groups based on tags](security_iam_id-based-policy-examples.md#security_iam_policy-examples-view-tags)\.
 
-## Resource Groups IAM Roles<a name="security_iam_roles"></a>
+## Resource Groups IAM roles<a name="security_iam_roles"></a>
 
 An [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) is an entity within your AWS account that has specific permissions\. Resource Groups does not have or use service roles\.
 
-### Using Temporary Credentials with Resource Groups<a name="security_iam_roles-tempcreds"></a>
+### Using temporary credentials with Resource Groups<a name="security_iam_roles-tempcreds"></a>
 
 In Resource Groups, you can use temporary credentials to sign in with federation, assume an IAM role, or to assume a cross\-account role\. You obtain temporary security credentials by calling AWS STS API operations such as [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) or [GetFederationToken](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html)\.
 
-### Service\-Linked Roles<a name="security_iam_roles-service-linked"></a>
+### Service\-linked roles<a name="security_iam_roles-service-linked"></a>
 
 [Service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role) allow AWS services to access resources in other services to complete an action on your behalf\.
 
 Resource Groups does not have or use service\-linked roles\.
 
-### Service Roles<a name="security_iam_roles-service"></a>
+### Service roles<a name="security_iam_roles-service"></a>
 
 This feature allows a service to assume a [service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-role) on your behalf\.
 

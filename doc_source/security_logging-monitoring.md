@@ -1,14 +1,14 @@
-# Logging and Monitoring in Resource Groups<a name="security_logging-monitoring"></a>
+# Logging and monitoring in Resource Groups<a name="security_logging-monitoring"></a>
 
 All AWS Resource Groups actions are logged in AWS CloudTrail\.
 
-## Logging AWS Resource Groups API Calls with AWS CloudTrail<a name="logging-using-cloudtrail"></a>
+## Logging AWS Resource Groups API calls with AWS CloudTrail<a name="logging-using-cloudtrail"></a>
 
 AWS Resource Groups and Tag Editor are integrated with AWS CloudTrail, a service that provides a record of actions taken by a user, role, or an AWS service in Resource Groups or Tag Editor\. CloudTrail captures all API calls for Resource Groups as events, including calls from the Resource Groups or Tag Editor console and from code calls to the Resource Groups APIs\. If you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket, including events for Resource Groups\. If you don't configure a trail, you can still view the most recent events in the CloudTrail console in **Event history**\. Using the information collected by CloudTrail, you can determine the request that was made to Resource Groups, the IP address from which the request was made, who made the request, when it was made, and additional details\. 
 
 To learn more about CloudTrail, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\.
 
-### Resource Groups Information in CloudTrail<a name="resource-groups-info-in-cloudtrail"></a>
+### Resource Groups information in CloudTrail<a name="resource-groups-info-in-cloudtrail"></a>
 
 CloudTrail is enabled on your AWS account when you create the account\. When activity occurs in Resource Groups, or in the Tag Editor console, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your AWS account\. For more information, see [Viewing Events with CloudTrail Event History](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)\. 
 
@@ -27,7 +27,7 @@ Every event or log entry contains information about who generated the request\. 
 
 For more information, see the [CloudTrail `userIdentity` Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
 
-### Understanding Resource Groups Log File Entries<a name="understanding-service-name-entries"></a>
+### Understanding Resource Groups log file entries<a name="understanding-service-name-entries"></a>
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they do not appear in any specific order\.
 
